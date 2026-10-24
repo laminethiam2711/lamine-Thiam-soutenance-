@@ -1,0 +1,81 @@
+<div class="page-entete">
+  <div>
+    <h1>Classes</h1>
+    <p>Une classe correspond à un niveau d'une spécialité pour une année académique (ex. L3 IAGE = semestres 5 et 6).</p>
+  </div>
+  <button class="btn btn-primaire" (click)="ouvrir()" [disabled]="specialites().length === 0"><app-icone nom="plus" /> Nouvelle classe</button>
+</div>
+
+<div class="carte">
+  @if (classes(); as liste) {
+    <div class="table-conteneur">
+      <table>
+        <thead>
+          <tr><th>Classe</th><th>Spécialité</th><th>Grade</th><th>Semestres</th><th>Année académique</th><th class="num">Étudiants</th><th class="num">UE</th><th></th></tr>
+        </thead>
+        <tbody>
+          @for (c of liste; track c.id) {
+            <tr>
+              <td><strong>{{ c.libelle }}</strong></td>
+              <td>{{ c.specialite?.libelle }}<div class="secondaire">{{ c.specialite?.mention?.libelle }} · {{ c.specialite?.mention?.domaine?.libelle }}</div></td>
+              <td>{{ c.grade }} {{ c.niveau }}</td>
+              <td><span class="badge badge-bleu">{{ semestres(c.niveau) }}</span></td>
+              <td>{{ c.annee_academique }}</td>
+              <td class="num">{{ c.inscriptions_count }}</td>
+              <td class="num">{{ c.ues_count }}</td>
+              <td class="actions">
+                <button class="btn-icone" title="Modifier" (click)="ouvrir(c)"><app-icone nom="modifier" [taille]="16" /></button>
+                <button class="btn-icone danger" title="Supprimer" (click)="supprimer(c)"><app-icone nom="supprimer" [taille]="16" /></button>
+              </td>
+            </tr>
+          } @empty {
+            <tr><td colspan="8" class="vide">Aucune classe. Créez d'abord une spécialité dans « Formations ».</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else { <app-chargement /> }
+</div>
+
+@if (modalOuvert()) {
+  <app-modal [titre]="edition ? 'Modifier la classe' : 'Nouvelle classe'" [largeur]="560" (fermer)="modalOuvert.set(false)">
+    <form (ngSubmit)="enregistrer()">
+      @if (erreur()) { <div class="erreur-form">{{ erreur() }}</div> }
+      <div class="grille-form">
+        <div class="champ pleine">
+          <label for="c-specialite">Spécialité</label>
+          <select id="c-specialite" name="specialite" [(ngModel)]="form.specialite_id">
+            @for (s of specialites(); track s.id) { <option [ngValue]="s.id">{{ s.code }} — {{ s.libelle }}</option> }
+          </select>
+        </div>
+        <div class="champ">
+          <label for="c-libelle">Libellé</label>
+          <input id="c-libelle" name="libelle" [(ngModel)]="form.libelle" placeholder="ex. L3 IAGE" />
+        </div>
+        <div class="champ">
+          <label for="c-annee">Année académique</label>
+          <input id="c-annee" name="annee" [(ngModel)]="form.annee_academique" placeholder="2025-2026" />
+        </div>
+        <div class="champ">
+          <label for="c-grade">Grade</label>
+          <select id="c-grade" name="grade" [(ngModel)]="form.grade">
+            <option value="Licence">Licence</option>
+            <option value="Master">Master</option>
+          </select>
+        </div>
+        <div class="champ">
+          <label for="c-niveau">Niveau</label>
+          <select id="c-niveau" name="niveau" [(ngModel)]="form.niveau">
+            <option [ngValue]="1">1re année (S1 · S2)</option>
+            <option [ngValue]="2">2e année (S3 · S4)</option>
+            <option [ngValue]="3">3e année (S5 · S6)</option>
+          </select>
+        </div>
+      </div>
+      <div class="pied-modal">
+        <button type="button" class="btn btn-secondaire" (click)="modalOuvert.set(false)">Annuler</button>
+        <button class="btn btn-primaire" [disabled]="enCours()">Enregistrer</button>
+      </div>
+    </form>
+  </app-modal>
+}

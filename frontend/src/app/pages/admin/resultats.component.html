@@ -1,0 +1,93 @@
+<div class="page-entete">
+  <div>
+    <h1>Résultats</h1>
+    <p>Procès-verbal calculé automatiquement : moyennes, crédits capitalisés et décision du jury.</p>
+  </div>
+  <div style="display:flex; gap:10px; flex-wrap:wrap" class="no-print">
+    @if (annuel()) {
+      @if (confirmation()) {
+        <button class="btn btn-secondaire" (click)="confirmation.set(false)">Annuler</button>
+        <button class="btn btn-primaire" (click)="deliberer()" [disabled]="deliberation()">Confirmer la délibération</button>
+      } @else {
+        <button class="btn btn-primaire" (click)="confirmation.set(true)"><app-icone nom="diplome" /> Délibérer</button>
+      }
+    }
+    <button class="btn btn-secondaire bouton-imprimer" (click)="imprimer()"><app-icone nom="imprimer" /> Imprimer le PV</button>
+  </div>
+</div>
+
+@if (confirmation()) {
+  <div class="erreur-form no-print" style="background: var(--bleu-pale); color: var(--navy-800)">
+    La délibération enregistre le résultat annuel de chaque étudiant de {{ classe()?.libelle }}
+    (moyenne générale, crédits, décision). Elle peut être refaite si des notes changent.
+  </div>
+}
+
+<div class="carte">
+  <div class="filtres no-print" style="justify-content: space-between">
+    <select [ngModel]="classeId()" (ngModelChange)="changerClasse($event)" aria-label="Classe">
+      @for (c of classes(); track c.id) { <option [ngValue]="c.id">{{ c.libelle }} — {{ c.annee_academique }}</option> }
+    </select>
+    @if (classe(); as c) {
+      <div class="onglets">
+        @for (s of c.semestres; track s) {
+          <button [class.actif]="semestre() === s" (click)="choisirSemestre(s)">Semestre {{ s }}</button>
+        }
+        <button [class.actif]="annuel()" (click)="choisirSemestre(null)">Année</button>
+      </div>
+    }
+  </div>
+
+  <div class="carte-entete">
+    <h2>{{ classe()?.libelle }} · {{ annuel() ? 'Résultats annuels' : 'Semestre ' + semestre() }}</h2>
+    <div style="display:flex; gap:8px; flex-wrap:wrap">
+      <span class="badge badge-vert">{{ resume().admis }} {{ annuel() ? 'admis' : 'moyenne ≥ 10' }}</span>
+      <span class="badge badge-rouge">{{ resume().autres }} {{ annuel() ? 'ajournés' : 'moyenne < 10' }}</span>
+      @if (resume().attente) { <span class="badge badge-or">{{ resume().attente }} en attente</span> }
+      <span class="badge badge-bleu">Réussite {{ resume().taux }} %</span>
+      <span class="badge badge-gris">Moy. classe {{ resume().moyenne | note }}</span>
+      @if (annuel() && resume().delibere) { <span class="badge badge-vert">Délibéré</span> }
+    </div>
+  </div>
+
+  @if (resultats(); as liste) {
+    <div class="table-conteneur">
+      <table>
+        <thead>
+          <tr>
+            <th class="centre">Rang</th><th>Identifiant</th><th>Prénom et nom</th>
+            @if (annuel()) { <th class="num">Moy. S{{ classe()?.semestres?.[0] }}</th><th class="num">Moy. S{{ classe()?.semestres?.[1] }}</th> }
+            <th class="num">{{ annuel() ? 'Moy. générale' : 'Moyenne' }}</th>
+            <th class="num">Crédits</th>
+            @if (!annuel()) { <th class="centre">UE non validées</th> }
+            <th>{{ annuel() ? 'Résultat' : 'Décision du jury' }}</th>
+            <th class="no-print"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of liste; track r.inscription_id) {
+            <tr>
+              <td class="centre chiffre"><strong>{{ r.rang ?? '—' }}</strong></td>
+              <td class="secondaire chiffre">{{ r.identifiant }}</td>
+              <td><strong>{{ r.nom_complet }}</strong></td>
+              @if (annuel()) {
+                <td class="num">{{ r.moyenne_s1 | note }}</td>
+                <td class="num">{{ r.moyenne_s2 | note }}</td>
+              }
+              <td class="num"><span [class]="classeNote(r.moyenne)">{{ r.moyenne | note }}</span></td>
+              <td class="num">{{ r.credits }} / {{ r.credits_requis }}</td>
+              @if (!annuel()) { <td class="centre">{{ r.ues_non_validees || '—' }}</td> }
+              <td><span [class]="classeBadge(r.decision)">{{ r.decision }}</span></td>
+              <td class="actions no-print">
+                <a class="btn-icone" title="Voir le bulletin" [routerLink]="['/admin/etudiants', r.etudiant_id, 'bulletin']"
+                  [queryParams]="{ semestre: semestre() ?? classe()?.semestres?.[1] }"><app-icone nom="oeil" [taille]="16" /></a>
+              </td>
+            </tr>
+          } @empty {
+            <tr><td colspan="10" class="vide">Aucun étudiant inscrit dans cette classe.</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else { <app-chargement /> }
+</div>

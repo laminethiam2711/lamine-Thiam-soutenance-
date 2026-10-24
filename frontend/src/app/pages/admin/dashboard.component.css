@@ -1,0 +1,20 @@
+.stat small { font-size: 18px; color: var(--texte-doux); margin-left: 2px; }
+.mise-en-avant { background: var(--navy-900); border-color: var(--navy-900); }
+.mise-en-avant .libelle, .mise-en-avant .detail, .mise-en-avant small { color: #a9bfe0; }
+.mise-en-avant .valeur { color: #fff; }
+
+.liste-classes, .liste-mentions { display: flex; flex-direction: column; gap: 18px; }
+.tete-classe { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.barre { height: 10px; background: var(--bleu-pale); border-radius: 999px; overflow: hidden; flex: 1; }
+.rempli { height: 100%; background: var(--navy-700); border-radius: 999px; transition: width .6s ease; }
+.ligne-classe .secondaire:last-child { margin-top: 6px; }
+
+.ligne-mention { display: flex; align-items: center; gap: 14px; }
+.nom-mention { width: 92px; font-weight: 600; font-size: 13.5px; }
+.nb { width: 28px; text-align: right; font-weight: 650; }
+.m-0 { background: var(--navy-900); }
+.m-1 { background: var(--navy-700); }
+.m-2 { background: var(--bleu); }
+.m-3 { background: var(--bleu-clair); }
+.m-4 { background: #d97a3a; }
+.m-5 { background: var(--rouge); }

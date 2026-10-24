@@ -1,0 +1,48 @@
+<div class="app" [class.menu-ouvert]="menuOuvert()">
+  <aside class="barre no-print">
+    <div class="marque">
+      <div class="logo"><app-icone nom="diplome" [taille]="20" /></div>
+      <div>
+        <div class="nom">GestNotes</div>
+        <div class="sous">Notes &amp; résultats</div>
+      </div>
+    </div>
+
+    <div class="section">{{ libelleRole() }}</div>
+    <nav>
+      @for (l of liens(); track l.lien) {
+        <a [routerLink]="l.lien" routerLinkActive="actif">
+          <app-icone [nom]="l.icone" />
+          <span>{{ l.libelle }}</span>
+        </a>
+      }
+    </nav>
+
+    <div class="bas">
+      <a routerLink="/profil" routerLinkActive="actif"><app-icone nom="cle" /><span>Mot de passe</span></a>
+      <button type="button" (click)="auth.logout()"><app-icone nom="deconnexion" /><span>Déconnexion</span></button>
+    </div>
+  </aside>
+
+  <div class="voile no-print" (click)="menuOuvert.set(false)"></div>
+
+  <div class="principal">
+    <header class="haut no-print">
+      <button type="button" class="btn-icone burger" (click)="menuOuvert.set(true)" aria-label="Menu">
+        <app-icone nom="menu" />
+      </button>
+      <div class="espace"></div>
+      <div class="utilisateur">
+        <div class="texte">
+          <strong>{{ auth.user()?.nom_complet }}</strong>
+          <span>{{ auth.user()?.email }}</span>
+        </div>
+        <div class="avatar">{{ initiales() }}</div>
+      </div>
+    </header>
+
+    <main>
+      <router-outlet />
+    </main>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="ecran">
+  <section class="presentation">
+    <div class="marque">
+      <div class="logo"><app-icone nom="diplome" [taille]="22" /></div>
+      <span>GestNotes</span>
+    </div>
+
+    <div class="accroche">
+      <h1>Système de gestion des notes et résultats académiques</h1>
+      <p>Enregistrement des notes, calcul automatique des moyennes, gestion des étudiants
+        et des enseignants, consultation des résultats.</p>
+
+      <ul>
+        <li><app-icone nom="notes" /> Saisie des notes par les enseignants</li>
+        <li><app-icone nom="resultats" /> Moyennes, mentions et classements calculés automatiquement</li>
+        <li><app-icone nom="bulletin" /> Bulletins consultables et imprimables par les étudiants</li>
+      </ul>
+    </div>
+
+    <div class="pied">Année académique 2025 – 2026</div>
+  </section>
+
+  <section class="formulaire">
+    <form (ngSubmit)="connexion()">
+      <h2>Connexion</h2>
+      <p class="intro">Accédez à votre espace avec vos identifiants.</p>
+
+      @if (demo) {
+        <div class="bandeau-demo">
+          <strong>Version de démonstration.</strong> Les données sont fictives et reviennent
+          à l'état initial quand la page est rechargée.
+        </div>
+      }
+
+      @if (erreur()) { <div class="erreur-form">{{ erreur() }}</div> }
+
+      <div class="champ">
+        <label for="email">Adresse email</label>
+        <input id="email" type="email" name="email" [(ngModel)]="email" autocomplete="username" placeholder="prenom.nom@ecole.sn" />
+      </div>
+      <div class="champ">
+        <label for="password">Mot de passe</label>
+        <input id="password" type="password" name="password" [(ngModel)]="password" autocomplete="current-password" placeholder="••••••••" />
+      </div>
+
+      <button class="btn btn-primaire valider" type="submit" [disabled]="chargement()">
+        {{ chargement() ? 'Connexion…' : 'Se connecter' }}
+      </button>
+
+      <div class="demo">
+        <div class="titre-demo">Comptes de démonstration</div>
+        <div class="boutons-demo">
+          @for (c of comptesDemo; track c.email) {
+            <button type="button" (click)="remplir(c)">{{ c.role }}</button>
+          }
+        </div>
+      </div>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,122 @@
+<div class="page-entete">
+  <div>
+    <h1>UE et EC</h1>
+    <p>Chaque Unité d'Enseignement donne des crédits ; ses Éléments Constitutifs ont un coefficient et un enseignant.</p>
+  </div>
+  <button class="btn btn-primaire" (click)="ouvrirUe()" [disabled]="!classeId()"><app-icone nom="plus" /> Nouvelle UE</button>
+</div>
+
+<div class="barre">
+  <select [ngModel]="classeId()" (ngModelChange)="changerClasse($event)" aria-label="Classe">
+    @for (c of classes(); track c.id) { <option [ngValue]="c.id">{{ c.libelle }} — {{ c.annee_academique }}</option> }
+  </select>
+  @if (classe(); as c) {
+    <div class="onglets">
+      @for (s of c.semestres; track s) {
+        <button [class.actif]="semestre() === s" (click)="changerSemestre(s)">Semestre {{ s }}</button>
+      }
+    </div>
+  }
+  <div class="totaux">
+    <span class="badge badge-bleu">{{ totaux().credits }} crédits</span>
+    <span class="badge badge-gris">{{ totaux().ecs }} EC · Σ coef {{ totaux().coefficients }}</span>
+  </div>
+</div>
+
+@if (ues(); as liste) {
+  @if (liste.length && totaux().credits !== 30) {
+    <div class="alerte">Le semestre totalise {{ totaux().credits }} crédits : un semestre LMD doit en compter 30.</div>
+  }
+  @for (ue of liste; track ue.id) {
+    <div class="carte ue">
+      <div class="carte-entete">
+        <h2><span class="code">{{ ue.code }}</span>{{ ue.libelle }}</h2>
+        <div class="infos-ue">
+          <span class="badge badge-bleu">{{ ue.credits }} crédits</span>
+          <span class="badge badge-gris">Σ coef {{ coefUe(ue) }}</span>
+          <button class="btn btn-secondaire btn-petit" (click)="ouvrirEc(ue)"><app-icone nom="plus" [taille]="15" /> EC</button>
+          <button class="btn-icone" title="Modifier l'UE" (click)="ouvrirUe(ue)"><app-icone nom="modifier" [taille]="16" /></button>
+          <button class="btn-icone danger" title="Supprimer l'UE" (click)="supprimerUe(ue)"><app-icone nom="supprimer" [taille]="16" /></button>
+        </div>
+      </div>
+      <div class="table-conteneur">
+        <table>
+          <thead><tr><th>Élément constitutif</th><th class="num">Coef</th><th>Enseignant</th><th></th></tr></thead>
+          <tbody>
+            @for (ec of ue.ecs; track ec.id) {
+              <tr>
+                <td>{{ ec.libelle }}</td>
+                <td class="num">{{ ec.coefficient | note }}</td>
+                <td>
+                  @if (ec.enseignant?.user; as u) { {{ u.nom_complet }} }
+                  @else { <span class="badge badge-or">Non attribué</span> }
+                </td>
+                <td class="actions">
+                  <button class="btn-icone" title="Modifier l'EC" (click)="ouvrirEc(ue, ec)"><app-icone nom="modifier" [taille]="16" /></button>
+                  <button class="btn-icone danger" title="Supprimer l'EC" (click)="supprimerEc(ec)"><app-icone nom="supprimer" [taille]="16" /></button>
+                </td>
+              </tr>
+            } @empty {
+              <tr><td colspan="4" class="vide">Aucun EC dans cette UE.</td></tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  } @empty {
+    <div class="carte vide">Aucune UE pour ce semestre.</div>
+  }
+} @else { <app-chargement /> }
+
+@if (modal(); as type) {
+  <app-modal [titre]="(editionId ? 'Modifier ' : 'Nouvel' + (type === 'ue' ? 'le ' : ' ')) + (type === 'ue' ? 'UE' : 'EC')" [largeur]="560" (fermer)="modal.set(null)">
+    <form (ngSubmit)="enregistrer()">
+      @if (erreur()) { <div class="erreur-form">{{ erreur() }}</div> }
+      @if (type === 'ue') {
+        <div class="grille-form">
+          <div class="champ">
+            <label for="u-code">Code</label>
+            <input id="u-code" name="code" [(ngModel)]="form.code" placeholder="ex. ALA1301" />
+          </div>
+          <div class="champ">
+            <label for="u-semestre">Semestre</label>
+            <select id="u-semestre" name="semestre" [(ngModel)]="form.semestre">
+              @for (s of classe()?.semestres; track s) { <option [ngValue]="s">Semestre {{ s }}</option> }
+            </select>
+          </div>
+          <div class="champ pleine">
+            <label for="u-libelle">Intitulé</label>
+            <input id="u-libelle" name="libelle" [(ngModel)]="form.libelle" placeholder="ex. Algorithme et langage" />
+          </div>
+          <div class="champ">
+            <label for="u-credits">Crédits</label>
+            <input id="u-credits" name="credits" type="number" min="1" max="30" [(ngModel)]="form.credits" />
+            <span class="aide">Fixés par l'UE, indépendants des coefficients.</span>
+          </div>
+        </div>
+      } @else {
+        <div class="grille-form">
+          <div class="champ pleine">
+            <label for="e-libelle">Intitulé de l'EC</label>
+            <input id="e-libelle" name="libelle" [(ngModel)]="form.libelle" placeholder="ex. Programmation Python 1" />
+          </div>
+          <div class="champ">
+            <label for="e-coef">Coefficient</label>
+            <input id="e-coef" name="coef" type="number" min="1" max="10" [(ngModel)]="form.coefficient" />
+          </div>
+          <div class="champ">
+            <label for="e-enseignant">Enseignant</label>
+            <select id="e-enseignant" name="enseignant" [(ngModel)]="form.enseignant_id">
+              <option [ngValue]="null">— Non attribué —</option>
+              @for (e of enseignants(); track e.id) { <option [ngValue]="e.id">{{ e.user?.nom_complet }}</option> }
+            </select>
+          </div>
+        </div>
+      }
+      <div class="pied-modal">
+        <button type="button" class="btn btn-secondaire" (click)="modal.set(null)">Annuler</button>
+        <button class="btn btn-primaire" [disabled]="enCours()">Enregistrer</button>
+      </div>
+    </form>
+  </app-modal>
+}

@@ -1,0 +1,174 @@
+<article class="bulletin">
+  <!-- ===== En-tête ===== -->
+  <header class="entete">
+    <div class="etab">
+      <div class="monogramme">{{ sigle }}</div>
+      <div class="etab-nom">{{ etablissement }}</div>
+    </div>
+    <dl class="identite">
+      <div><dt>Année académique :</dt><dd>{{ bulletin().entete.annee_academique }}</dd></div>
+      <div><dt>Identifiant :</dt><dd class="chiffre">{{ bulletin().etudiant.identifiant }}</dd></div>
+      <div><dt>Prénom et nom :</dt><dd>{{ bulletin().etudiant.nom_complet }}</dd></div>
+      <div><dt>Sexe :</dt><dd>{{ bulletin().etudiant.sexe }}</dd></div>
+      <div><dt>Date et lieu de naissance :</dt>
+        <dd>{{ bulletin().etudiant.date_naissance || '—' }}
+          @if (bulletin().etudiant.lieu_naissance) { <span class="a">à</span> {{ bulletin().etudiant.lieu_naissance }} }
+        </dd></div>
+    </dl>
+    <div class="titre">
+      <span>Bulletin de notes</span>
+      <strong>{{ titre() }}</strong>
+    </div>
+  </header>
+
+  <div class="offre">
+    <div><span>Domaine</span>{{ bulletin().entete.domaine }}</div>
+    <div><span>Mention</span>{{ bulletin().entete.mention }}</div>
+    <div><span>Spécialité</span>{{ bulletin().entete.specialite }}</div>
+    <div><span>Grade</span>{{ bulletin().entete.grade }}</div>
+  </div>
+
+  <!-- ===== Tableau des UE et EC ===== -->
+  @for (s of bulletin().semestres; track s.semestre) {
+    @if (!bulletin().semestre) { <div class="bandeau-semestre">Semestre {{ s.semestre }}</div> }
+    <div class="table-conteneur">
+      <table class="notes">
+        <thead>
+          <tr>
+            <th class="col-ec">UE · Éléments constitutifs</th>
+            <th class="num">MCC<small>40 %</small></th>
+            <th class="num">Examen<small>60 %</small></th>
+            @if (avecRattrapage()) { <th class="num">Rattrap.</th> }
+            <th class="num">Moy<small>EC</small></th>
+            <th class="num">Coef<small>EC</small></th>
+            <th class="num">Moyenne<small>Coef</small></th>
+            <th class="num">Crédit<small>UE</small></th>
+            <th class="num">Moyenne<small>UE</small></th>
+            <th>Appréciation</th>
+          </tr>
+        </thead>
+        @for (ue of s.ues; track ue.ue_id) {
+          <tbody>
+            <tr class="ligne-ue"><td [attr.colspan]="colonnes()"><b>{{ ue.code }}</b> {{ ue.libelle }}</td></tr>
+            @for (ec of ue.ecs; track ec.ec_id) {
+              <tr>
+                <td class="col-ec">{{ ec.libelle }}</td>
+                <td class="num">{{ ec.mcc | note }}</td>
+                <td class="num" [class.a-faire]="ec.examen_a_faire">{{ ec.examen_a_faire ? 'À faire' : (ec.examen | note) }}</td>
+                @if (avecRattrapage()) { <td class="num ratt">{{ ec.rattrapage !== null ? (ec.rattrapage | note) : '' }}</td> }
+                <td class="num fort">{{ ec.moyenne | note }}</td>
+                <td class="num">{{ ec.coefficient | note }}</td>
+                <td class="num">{{ ec.points | note }}</td>
+                <td></td>
+                <td></td>
+                <td class="appr">{{ ec.appreciation }}</td>
+              </tr>
+            }
+            <tr class="total-ue">
+              <td class="col-ec"></td>
+              <td></td><td></td>
+              @if (avecRattrapage()) { <td></td> }
+              <td></td>
+              <td class="num">{{ ue.total_coefficients | note }}</td>
+              <td class="num">{{ ue.total_points | note }}</td>
+              <td class="num">{{ ue.credits | note }}</td>
+              <td class="num fort">{{ ue.moyenne | note: 3 }}</td>
+              <td><span [class]="classeStatut(ue.statut)">{{ libelleStatut[ue.statut] }}</span></td>
+            </tr>
+          </tbody>
+        }
+      </table>
+    </div>
+  }
+
+  <!-- ===== Résultats ===== -->
+  @if (bulletin().annuel; as a) {
+    <section class="resultats annuel">
+      @for (s of semestresAnnee(); track s.semestre) {
+        <div class="bloc">
+          <span class="nom">Semestre {{ s.semestre }}</span>
+          <div class="valeurs">
+            <div><span>Crédits</span><b class="chiffre">{{ s.credits_obtenus | note }} / {{ s.credits_requis }}</b></div>
+            <div><span>Moyenne</span><b class="chiffre">{{ s.moyenne | note }} / 20</b></div>
+          </div>
+        </div>
+      }
+      <div class="bloc total">
+        <div class="valeurs">
+          <div><span>Total crédits</span><b class="chiffre">{{ a.credits_total | note }} / {{ a.credits_requis }}</b></div>
+          <div><span>Moy. générale</span><b class="chiffre">{{ a.moyenne_generale | note }} / 20</b></div>
+        </div>
+      </div>
+    </section>
+    <p class="decision">
+      Décision du jury de délibération :
+      <b>{{ bulletin().semestres[bulletin().semestres.length - 1].decision }}</b>
+      / Résultat : <b>{{ a.decision }}</b>
+      @if (a.delibere_le) { <span class="delibere">· délibéré le {{ a.delibere_le }}</span> }
+    </p>
+  } @else {
+    @for (s of bulletin().semestres; track s.semestre) {
+      <section class="resultats">
+        <div class="ligne"><span>Total crédits obtenus :</span><b class="chiffre">{{ s.credits_obtenus | note }} / {{ s.credits_requis }}</b></div>
+        <div class="ligne"><span>Moyenne du semestre :</span><b class="chiffre">{{ s.moyenne | note }} / 20</b></div>
+      </section>
+      <p class="decision">Décision du jury de délibération : <b>{{ s.decision }}</b></p>
+    }
+  }
+
+  <!-- ===== Récapitulatif des unités ===== -->
+  <section class="recaps" [class.deux]="recapitulatifs().length > 1">
+    @for (r of recapitulatifs(); track r.semestre; let premier = $first) {
+      <table class="recap">
+        <tbody>
+          <tr>
+            <th rowspan="2" class="titre-recap">
+              Récapitulatif des unités
+              @if (recapitulatifs().length > 1) { <small>{{ premier ? '1er' : '2e' }} semestre (S{{ r.semestre }})</small> }
+            </th>
+            @for (c of cases(r); track $index) { <th class="centre">{{ c ? 'UE ' + ($index + 1) : '' }}</th> }
+          </tr>
+          <tr>
+            @for (c of cases(r); track $index) { <td class="centre chiffre fort" [title]="c?.code ?? ''">{{ c ? (c.moyenne | note) : '' }}</td> }
+          </tr>
+          <tr>
+            <th>Validations</th>
+            @for (c of cases(r); track $index) {
+              <td class="centre" [class]="c ? 'case-' + c.statut : ''">{{ c ? libelleStatut[c.statut] : '' }}</td>
+            }
+          </tr>
+          <tr>
+            <th>Crédits obtenus</th>
+            @for (c of cases(r); track $index) { <td class="centre chiffre">{{ c ? (c.credits_obtenus | note) : '' }}</td> }
+          </tr>
+        </tbody>
+      </table>
+    }
+  </section>
+
+  <!-- ===== Légende et signature ===== -->
+  <footer class="pied">
+    <div class="legende">
+      <strong>Légende</strong>
+      <div class="abreviations">
+        <span>MCC = Moyenne des contrôles</span>
+        <span>EC = Élément constitutif</span>
+        <span>Rattrap. = note de rattrapage</span>
+        <span>Moy = moyenne EC</span>
+      </div>
+      <div class="cles">
+        <span><i class="case-en_attente"></i> Examen(s) à faire</span>
+        <span><i class="case-non_validee"></i> UE non validée</span>
+        <span><i class="case-validee"></i> UE validée</span>
+        <span><i class="case-validee_rattrapage"></i> UE validée en rattrapage</span>
+      </div>
+      <p class="regles">Moy EC = MCC × 40 % + Examen × 60 % · Moy UE = Σ Moyenne Coef / Σ Coef ·
+        une UE est validée si sa moyenne est ≥ 10 et donne alors tous ses crédits.</p>
+    </div>
+    <div class="signature">
+      <span>{{ signataire }}</span>
+      <div class="cachet"></div>
+      <span class="date">Le : {{ dateEdition }}</span>
+    </div>
+  </footer>
+</article>

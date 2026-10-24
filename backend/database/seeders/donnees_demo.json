@@ -1,0 +1,4111 @@
+{
+ "domaines": [
+  {
+   "id": 1,
+   "libelle": "Sciences et Technologies"
+  }
+ ],
+ "mentions": [
+  {
+   "id": 1,
+   "domaine_id": 1,
+   "libelle": "Informatique"
+  }
+ ],
+ "specialites": [
+  {
+   "id": 1,
+   "mention_id": 1,
+   "code": "IAGE",
+   "libelle": "Informatique appliquée à la gestion des entreprises"
+  },
+  {
+   "id": 2,
+   "mention_id": 1,
+   "code": "GL",
+   "libelle": "Génie logiciel"
+  }
+ ],
+ "classes": [
+  {
+   "id": 1,
+   "specialite_id": 1,
+   "libelle": "L2 IAGE",
+   "grade": "Licence",
+   "niveau": 2,
+   "annee_academique": "2025-2026"
+  },
+  {
+   "id": 2,
+   "specialite_id": 1,
+   "libelle": "L3 IAGE",
+   "grade": "Licence",
+   "niveau": 3,
+   "annee_academique": "2025-2026"
+  }
+ ],
+ "users": [
+  {
+   "id": 1,
+   "prenom": "Administrateur",
+   "nom": "Scolarité",
+   "email": "admin@ecole.sn",
+   "telephone": null,
+   "role": "admin",
+   "password": "admin123"
+  },
+  {
+   "id": 2,
+   "prenom": "Moussa",
+   "nom": "Diop",
+   "email": "moussa.diop@ecole.sn",
+   "telephone": "77 221 50 74",
+   "role": "enseignant",
+   "password": "passer123"
+  },
+  {
+   "id": 3,
+   "prenom": "Awa",
+   "nom": "Ndiaye",
+   "email": "awa.ndiaye@ecole.sn",
+   "telephone": "77 624 92 23",
+   "role": "enseignant",
+   "password": "passer123"
+  },
+  {
+   "id": 4,
+   "prenom": "Cheikh",
+   "nom": "Fall",
+   "email": "cheikh.fall@ecole.sn",
+   "telephone": "77 328 86 89",
+   "role": "enseignant",
+   "password": "passer123"
+  },
+  {
+   "id": 5,
+   "prenom": "Aminata",
+   "nom": "Sarr",
+   "email": "aminata.sarr@ecole.sn",
+   "telephone": "77 669 63 83",
+   "role": "enseignant",
+   "password": "passer123"
+  },
+  {
+   "id": 6,
+   "prenom": "Ibrahima",
+   "nom": "Sène",
+   "email": "ibrahima.sene@ecole.sn",
+   "telephone": "77 660 72 85",
+   "role": "enseignant",
+   "password": "passer123"
+  },
+  {
+   "id": 7,
+   "prenom": "Marie",
+   "nom": "Mendy",
+   "email": "marie.mendy@ecole.sn",
+   "telephone": "77 551 40 10",
+   "role": "enseignant",
+   "password": "passer123"
+  },
+  {
+   "id": 8,
+   "prenom": "Fatou",
+   "nom": "Sow",
+   "email": "fatou.sow@ecole.sn",
+   "telephone": "78 213 46 22",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 9,
+   "prenom": "Ibrahima",
+   "nom": "Ba",
+   "email": "ibrahima.ba@ecole.sn",
+   "telephone": "78 786 23 89",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 10,
+   "prenom": "Mariama",
+   "nom": "Diallo",
+   "email": "mariama.diallo@ecole.sn",
+   "telephone": "78 365 67 33",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 11,
+   "prenom": "Ousmane",
+   "nom": "Gueye",
+   "email": "ousmane.gueye@ecole.sn",
+   "telephone": "78 927 29 76",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 12,
+   "prenom": "Khady",
+   "nom": "Faye",
+   "email": "khady.faye@ecole.sn",
+   "telephone": "78 499 44 64",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 13,
+   "prenom": "Abdoulaye",
+   "nom": "Kane",
+   "email": "abdoulaye.kane@ecole.sn",
+   "telephone": "78 265 43 42",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 14,
+   "prenom": "Ndeye",
+   "nom": "Mbaye",
+   "email": "ndeye.mbaye@ecole.sn",
+   "telephone": "78 302 81 17",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 15,
+   "prenom": "Pape",
+   "nom": "Cissé",
+   "email": "pape.cisse@ecole.sn",
+   "telephone": "78 824 56 39",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 16,
+   "prenom": "Aissatou",
+   "nom": "Thiaw",
+   "email": "aissatou.thiaw@ecole.sn",
+   "telephone": "78 142 85 94",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 17,
+   "prenom": "Mamadou",
+   "nom": "Seck",
+   "email": "mamadou.seck@ecole.sn",
+   "telephone": "78 668 76 41",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 18,
+   "prenom": "Coumba",
+   "nom": "Niang",
+   "email": "coumba.niang@ecole.sn",
+   "telephone": "78 795 73 96",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 19,
+   "prenom": "Serigne",
+   "nom": "Mbodj",
+   "email": "serigne.mbodj@ecole.sn",
+   "telephone": "78 797 85 81",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 20,
+   "prenom": "Astou",
+   "nom": "Diagne",
+   "email": "astou.diagne@ecole.sn",
+   "telephone": "78 468 33 19",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 21,
+   "prenom": "Babacar",
+   "nom": "Sy",
+   "email": "babacar.sy@ecole.sn",
+   "telephone": "78 258 51 28",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 22,
+   "prenom": "Rokhaya",
+   "nom": "Diouf",
+   "email": "rokhaya.diouf@ecole.sn",
+   "telephone": "78 798 20 69",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 23,
+   "prenom": "Modou",
+   "nom": "Lô",
+   "email": "modou.lo@ecole.sn",
+   "telephone": "78 373 65 84",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 24,
+   "prenom": "Bineta",
+   "nom": "Camara",
+   "email": "bineta.camara@ecole.sn",
+   "telephone": "78 607 16 79",
+   "role": "etudiant",
+   "password": "passer123"
+  },
+  {
+   "id": 25,
+   "prenom": "Alioune",
+   "nom": "Touré",
+   "email": "alioune.toure@ecole.sn",
+   "telephone": "78 199 41 95",
+   "role": "etudiant",
+   "password": "passer123"
+  }
+ ],
+ "enseignants": [
+  {
+   "id": 1,
+   "user_id": 2,
+   "matricule": "ENS-001",
+   "specialite": "Développement et algorithmique"
+  },
+  {
+   "id": 2,
+   "user_id": 3,
+   "matricule": "ENS-002",
+   "specialite": "Bases de données et systèmes d'information"
+  },
+  {
+   "id": 3,
+   "user_id": 4,
+   "matricule": "ENS-003",
+   "specialite": "Réseaux et systèmes"
+  },
+  {
+   "id": 4,
+   "user_id": 5,
+   "matricule": "ENS-004",
+   "specialite": "Gestion, droit et management"
+  },
+  {
+   "id": 5,
+   "user_id": 6,
+   "matricule": "ENS-005",
+   "specialite": "Mathématiques"
+  },
+  {
+   "id": 6,
+   "user_id": 7,
+   "matricule": "ENS-006",
+   "specialite": "Langues et communication"
+  }
+ ],
+ "etudiants": [
+  {
+   "id": 1,
+   "user_id": 8,
+   "matricule": "411-23-4408/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2003-01-27",
+   "lieu_naissance": "Ziguinchor"
+  },
+  {
+   "id": 2,
+   "user_id": 9,
+   "matricule": "411-23-4444/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2003-08-05",
+   "lieu_naissance": "Ziguinchor"
+  },
+  {
+   "id": 3,
+   "user_id": 10,
+   "matricule": "411-23-4479/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2003-12-16",
+   "lieu_naissance": "Pikine"
+  },
+  {
+   "id": 4,
+   "user_id": 11,
+   "matricule": "411-23-4506/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2001-07-01",
+   "lieu_naissance": "Pikine"
+  },
+  {
+   "id": 5,
+   "user_id": 12,
+   "matricule": "411-23-4520/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2004-07-28",
+   "lieu_naissance": "Pikine"
+  },
+  {
+   "id": 6,
+   "user_id": 13,
+   "matricule": "411-23-4543/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2000-01-14",
+   "lieu_naissance": "Mbour"
+  },
+  {
+   "id": 7,
+   "user_id": 14,
+   "matricule": "411-23-4567/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2005-02-06",
+   "lieu_naissance": "Keur Massar"
+  },
+  {
+   "id": 8,
+   "user_id": 15,
+   "matricule": "411-23-4595/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2004-05-11",
+   "lieu_naissance": "Thiès"
+  },
+  {
+   "id": 9,
+   "user_id": 16,
+   "matricule": "411-23-4617/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2001-03-10",
+   "lieu_naissance": "Mbour"
+  },
+  {
+   "id": 10,
+   "user_id": 17,
+   "matricule": "411-23-4627/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2002-11-27",
+   "lieu_naissance": "Ziguinchor"
+  },
+  {
+   "id": 11,
+   "user_id": 18,
+   "matricule": "411-23-4636/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2005-11-25",
+   "lieu_naissance": "Guédiawaye"
+  },
+  {
+   "id": 12,
+   "user_id": 19,
+   "matricule": "411-23-4672/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2001-02-01",
+   "lieu_naissance": "Mbour"
+  },
+  {
+   "id": 13,
+   "user_id": 20,
+   "matricule": "411-24-4696/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2004-03-25",
+   "lieu_naissance": "Mbour"
+  },
+  {
+   "id": 14,
+   "user_id": 21,
+   "matricule": "411-24-4725/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2005-09-02",
+   "lieu_naissance": "Ziguinchor"
+  },
+  {
+   "id": 15,
+   "user_id": 22,
+   "matricule": "411-24-4744/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2003-06-18",
+   "lieu_naissance": "Guédiawaye"
+  },
+  {
+   "id": 16,
+   "user_id": 23,
+   "matricule": "411-24-4767/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2000-06-20",
+   "lieu_naissance": "Guédiawaye"
+  },
+  {
+   "id": 17,
+   "user_id": 24,
+   "matricule": "411-24-4785/ISI-KM",
+   "sexe": "F",
+   "date_naissance": "2002-04-18",
+   "lieu_naissance": "Kaolack"
+  },
+  {
+   "id": 18,
+   "user_id": 25,
+   "matricule": "411-24-4825/ISI-KM",
+   "sexe": "M",
+   "date_naissance": "2003-03-20",
+   "lieu_naissance": "Guédiawaye"
+  }
+ ],
+ "inscriptions": [
+  {
+   "id": 1,
+   "etudiant_id": 1,
+   "classe_id": 2
+  },
+  {
+   "id": 2,
+   "etudiant_id": 2,
+   "classe_id": 2
+  },
+  {
+   "id": 3,
+   "etudiant_id": 3,
+   "classe_id": 2
+  },
+  {
+   "id": 4,
+   "etudiant_id": 4,
+   "classe_id": 2
+  },
+  {
+   "id": 5,
+   "etudiant_id": 5,
+   "classe_id": 2
+  },
+  {
+   "id": 6,
+   "etudiant_id": 6,
+   "classe_id": 2
+  },
+  {
+   "id": 7,
+   "etudiant_id": 7,
+   "classe_id": 2
+  },
+  {
+   "id": 8,
+   "etudiant_id": 8,
+   "classe_id": 2
+  },
+  {
+   "id": 9,
+   "etudiant_id": 9,
+   "classe_id": 2
+  },
+  {
+   "id": 10,
+   "etudiant_id": 10,
+   "classe_id": 2
+  },
+  {
+   "id": 11,
+   "etudiant_id": 11,
+   "classe_id": 2
+  },
+  {
+   "id": 12,
+   "etudiant_id": 12,
+   "classe_id": 2
+  },
+  {
+   "id": 13,
+   "etudiant_id": 13,
+   "classe_id": 1
+  },
+  {
+   "id": 14,
+   "etudiant_id": 14,
+   "classe_id": 1
+  },
+  {
+   "id": 15,
+   "etudiant_id": 15,
+   "classe_id": 1
+  },
+  {
+   "id": 16,
+   "etudiant_id": 16,
+   "classe_id": 1
+  },
+  {
+   "id": 17,
+   "etudiant_id": 17,
+   "classe_id": 1
+  },
+  {
+   "id": 18,
+   "etudiant_id": 18,
+   "classe_id": 1
+  }
+ ],
+ "ues": [
+  {
+   "id": 1,
+   "classe_id": 1,
+   "code": "ALA1301",
+   "libelle": "Algorithme et langage",
+   "credits": 5,
+   "semestre": 3
+  },
+  {
+   "id": 2,
+   "classe_id": 1,
+   "code": "RSY1302",
+   "libelle": "Réseaux et systèmes",
+   "credits": 4,
+   "semestre": 3
+  },
+  {
+   "id": 3,
+   "classe_id": 1,
+   "code": "SIBD1303",
+   "libelle": "Systèmes d'information et bases de données",
+   "credits": 4,
+   "semestre": 3
+  },
+  {
+   "id": 4,
+   "classe_id": 1,
+   "code": "MAP1304",
+   "libelle": "Mathématiques et techniques quantitatives de gestion",
+   "credits": 6,
+   "semestre": 3
+  },
+  {
+   "id": 5,
+   "classe_id": 1,
+   "code": "MOR1305",
+   "libelle": "Management et organisation",
+   "credits": 7,
+   "semestre": 3
+  },
+  {
+   "id": 6,
+   "classe_id": 1,
+   "code": "COM1306",
+   "libelle": "Communication",
+   "credits": 4,
+   "semestre": 3
+  },
+  {
+   "id": 7,
+   "classe_id": 1,
+   "code": "ALA1401",
+   "libelle": "Algorithme et langage",
+   "credits": 9,
+   "semestre": 4
+  },
+  {
+   "id": 8,
+   "classe_id": 1,
+   "code": "RSY1402",
+   "libelle": "Réseaux et systèmes",
+   "credits": 6,
+   "semestre": 4
+  },
+  {
+   "id": 9,
+   "classe_id": 1,
+   "code": "SGBD1403",
+   "libelle": "Systèmes de gestion de bases de données",
+   "credits": 4,
+   "semestre": 4
+  },
+  {
+   "id": 10,
+   "classe_id": 1,
+   "code": "MAP1404",
+   "libelle": "Mathématiques et techniques quantitatives de gestion",
+   "credits": 6,
+   "semestre": 4
+  },
+  {
+   "id": 11,
+   "classe_id": 1,
+   "code": "MOR1405",
+   "libelle": "Management et organisation",
+   "credits": 5,
+   "semestre": 4
+  },
+  {
+   "id": 12,
+   "classe_id": 2,
+   "code": "GLO1501",
+   "libelle": "Génie logiciel",
+   "credits": 6,
+   "semestre": 5
+  },
+  {
+   "id": 13,
+   "classe_id": 2,
+   "code": "DEV1502",
+   "libelle": "Développement web",
+   "credits": 7,
+   "semestre": 5
+  },
+  {
+   "id": 14,
+   "classe_id": 2,
+   "code": "BDA1503",
+   "libelle": "Bases de données avancées",
+   "credits": 5,
+   "semestre": 5
+  },
+  {
+   "id": 15,
+   "classe_id": 2,
+   "code": "RSE1504",
+   "libelle": "Réseaux et sécurité",
+   "credits": 5,
+   "semestre": 5
+  },
+  {
+   "id": 16,
+   "classe_id": 2,
+   "code": "MOR1505",
+   "libelle": "Management et organisation",
+   "credits": 4,
+   "semestre": 5
+  },
+  {
+   "id": 17,
+   "classe_id": 2,
+   "code": "COM1506",
+   "libelle": "Communication",
+   "credits": 3,
+   "semestre": 5
+  },
+  {
+   "id": 18,
+   "classe_id": 2,
+   "code": "JAV1601",
+   "libelle": "Développement Java",
+   "credits": 8,
+   "semestre": 6
+  },
+  {
+   "id": 19,
+   "classe_id": 2,
+   "code": "MOB1602",
+   "libelle": "Développement mobile",
+   "credits": 6,
+   "semestre": 6
+  },
+  {
+   "id": 20,
+   "classe_id": 2,
+   "code": "SIG1603",
+   "libelle": "Systèmes d'information de gestion",
+   "credits": 6,
+   "semestre": 6
+  },
+  {
+   "id": 21,
+   "classe_id": 2,
+   "code": "STG1604",
+   "libelle": "Stage et mémoire",
+   "credits": 10,
+   "semestre": 6
+  }
+ ],
+ "ecs": [
+  {
+   "id": 1,
+   "ue_id": 1,
+   "libelle": "Algorithmique 3",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 2,
+   "ue_id": 1,
+   "libelle": "Programmation Python 1",
+   "coefficient": 2,
+   "enseignant_id": 1
+  },
+  {
+   "id": 3,
+   "ue_id": 2,
+   "libelle": "Administration système Linux",
+   "coefficient": 2,
+   "enseignant_id": 3
+  },
+  {
+   "id": 4,
+   "ue_id": 2,
+   "libelle": "Fondamentaux des réseaux informatiques 1",
+   "coefficient": 2,
+   "enseignant_id": 3
+  },
+  {
+   "id": 5,
+   "ue_id": 3,
+   "libelle": "Analyse et conception d'un système d'information 1",
+   "coefficient": 2,
+   "enseignant_id": 2
+  },
+  {
+   "id": 6,
+   "ue_id": 3,
+   "libelle": "Technologie web 3",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 7,
+   "ue_id": 4,
+   "libelle": "Probabilités et statistiques 1",
+   "coefficient": 3,
+   "enseignant_id": 5
+  },
+  {
+   "id": 8,
+   "ue_id": 4,
+   "libelle": "Recherche opérationnelle",
+   "coefficient": 2,
+   "enseignant_id": 5
+  },
+  {
+   "id": 9,
+   "ue_id": 4,
+   "libelle": "Comptabilité analytique",
+   "coefficient": 3,
+   "enseignant_id": 4
+  },
+  {
+   "id": 10,
+   "ue_id": 5,
+   "libelle": "Fiscalité des entreprises",
+   "coefficient": 2,
+   "enseignant_id": 4
+  },
+  {
+   "id": 11,
+   "ue_id": 5,
+   "libelle": "Technique de communication",
+   "coefficient": 2,
+   "enseignant_id": 6
+  },
+  {
+   "id": 12,
+   "ue_id": 5,
+   "libelle": "CRM et marketing digital",
+   "coefficient": 2,
+   "enseignant_id": 4
+  },
+  {
+   "id": 13,
+   "ue_id": 6,
+   "libelle": "Anglais : TOEIC 3",
+   "coefficient": 2,
+   "enseignant_id": 6
+  },
+  {
+   "id": 14,
+   "ue_id": 6,
+   "libelle": "Communication professionnelle",
+   "coefficient": 2,
+   "enseignant_id": 6
+  },
+  {
+   "id": 15,
+   "ue_id": 7,
+   "libelle": "Algorithmique 4",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 16,
+   "ue_id": 7,
+   "libelle": "Programmation orientée objet Java",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 17,
+   "ue_id": 7,
+   "libelle": "Programmation Python 2",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 18,
+   "ue_id": 8,
+   "libelle": "Fondamentaux des réseaux informatiques 2",
+   "coefficient": 3,
+   "enseignant_id": 3
+  },
+  {
+   "id": 19,
+   "ue_id": 8,
+   "libelle": "Administration réseaux Linux",
+   "coefficient": 3,
+   "enseignant_id": 3
+  },
+  {
+   "id": 20,
+   "ue_id": 9,
+   "libelle": "Analyse et conception d'un système d'information 2",
+   "coefficient": 3,
+   "enseignant_id": 2
+  },
+  {
+   "id": 21,
+   "ue_id": 9,
+   "libelle": "Technologies web",
+   "coefficient": 2,
+   "enseignant_id": 1
+  },
+  {
+   "id": 22,
+   "ue_id": 10,
+   "libelle": "Probabilités et statistiques 2",
+   "coefficient": 2,
+   "enseignant_id": 5
+  },
+  {
+   "id": 23,
+   "ue_id": 10,
+   "libelle": "Mathématiques financières",
+   "coefficient": 2,
+   "enseignant_id": 5
+  },
+  {
+   "id": 24,
+   "ue_id": 10,
+   "libelle": "Comptabilité analytique 2",
+   "coefficient": 2,
+   "enseignant_id": 4
+  },
+  {
+   "id": 25,
+   "ue_id": 11,
+   "libelle": "Droit des TIC",
+   "coefficient": 3,
+   "enseignant_id": 4
+  },
+  {
+   "id": 26,
+   "ue_id": 11,
+   "libelle": "Anglais",
+   "coefficient": 2,
+   "enseignant_id": 6
+  },
+  {
+   "id": 27,
+   "ue_id": 12,
+   "libelle": "Génie logiciel",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 28,
+   "ue_id": 12,
+   "libelle": "UML et méthodes agiles",
+   "coefficient": 2,
+   "enseignant_id": 2
+  },
+  {
+   "id": 29,
+   "ue_id": 13,
+   "libelle": "Framework back-end (Laravel)",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 30,
+   "ue_id": 13,
+   "libelle": "Framework front-end (Angular)",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 31,
+   "ue_id": 14,
+   "libelle": "Administration de bases de données",
+   "coefficient": 2,
+   "enseignant_id": 2
+  },
+  {
+   "id": 32,
+   "ue_id": 14,
+   "libelle": "Bases de données NoSQL",
+   "coefficient": 2,
+   "enseignant_id": 2
+  },
+  {
+   "id": 33,
+   "ue_id": 15,
+   "libelle": "Sécurité informatique",
+   "coefficient": 2,
+   "enseignant_id": 3
+  },
+  {
+   "id": 34,
+   "ue_id": 15,
+   "libelle": "Cloud computing",
+   "coefficient": 2,
+   "enseignant_id": 3
+  },
+  {
+   "id": 35,
+   "ue_id": 16,
+   "libelle": "Gestion de projet",
+   "coefficient": 2,
+   "enseignant_id": 4
+  },
+  {
+   "id": 36,
+   "ue_id": 16,
+   "libelle": "Droit du travail",
+   "coefficient": 1,
+   "enseignant_id": 4
+  },
+  {
+   "id": 37,
+   "ue_id": 17,
+   "libelle": "Anglais professionnel",
+   "coefficient": 2,
+   "enseignant_id": 6
+  },
+  {
+   "id": 38,
+   "ue_id": 18,
+   "libelle": "Java EE",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 39,
+   "ue_id": 18,
+   "libelle": "JavaFX et Hibernate",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 40,
+   "ue_id": 19,
+   "libelle": "Flutter",
+   "coefficient": 3,
+   "enseignant_id": 1
+  },
+  {
+   "id": 41,
+   "ue_id": 19,
+   "libelle": "Kotlin",
+   "coefficient": 2,
+   "enseignant_id": 3
+  },
+  {
+   "id": 42,
+   "ue_id": 20,
+   "libelle": "ERP et progiciels de gestion",
+   "coefficient": 2,
+   "enseignant_id": 2
+  },
+  {
+   "id": 43,
+   "ue_id": 20,
+   "libelle": "Business Intelligence",
+   "coefficient": 2,
+   "enseignant_id": 2
+  },
+  {
+   "id": 44,
+   "ue_id": 21,
+   "libelle": "Mémoire de fin de cycle",
+   "coefficient": 4,
+   "enseignant_id": 2
+  },
+  {
+   "id": 45,
+   "ue_id": 21,
+   "libelle": "Stage en entreprise",
+   "coefficient": 3,
+   "enseignant_id": 4
+  }
+ ],
+ "notes": [
+  {
+   "id": 1,
+   "inscription_id": 1,
+   "ec_id": 27,
+   "mcc": 15.0,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 2,
+   "inscription_id": 1,
+   "ec_id": 28,
+   "mcc": 12.25,
+   "examen": 16.75,
+   "rattrapage": null
+  },
+  {
+   "id": 3,
+   "inscription_id": 1,
+   "ec_id": 29,
+   "mcc": 16.5,
+   "examen": 15.5,
+   "rattrapage": null
+  },
+  {
+   "id": 4,
+   "inscription_id": 1,
+   "ec_id": 30,
+   "mcc": 17.0,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 5,
+   "inscription_id": 1,
+   "ec_id": 31,
+   "mcc": 11.0,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 6,
+   "inscription_id": 1,
+   "ec_id": 32,
+   "mcc": 14.0,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 7,
+   "inscription_id": 1,
+   "ec_id": 33,
+   "mcc": 13.5,
+   "examen": 16.0,
+   "rattrapage": null
+  },
+  {
+   "id": 8,
+   "inscription_id": 1,
+   "ec_id": 34,
+   "mcc": 15.0,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 9,
+   "inscription_id": 1,
+   "ec_id": 35,
+   "mcc": 10.75,
+   "examen": 14.75,
+   "rattrapage": null
+  },
+  {
+   "id": 10,
+   "inscription_id": 1,
+   "ec_id": 36,
+   "mcc": 12.75,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 11,
+   "inscription_id": 1,
+   "ec_id": 37,
+   "mcc": 13.0,
+   "examen": 13.75,
+   "rattrapage": null
+  },
+  {
+   "id": 12,
+   "inscription_id": 1,
+   "ec_id": 38,
+   "mcc": 13.75,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 13,
+   "inscription_id": 1,
+   "ec_id": 39,
+   "mcc": 13.75,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 14,
+   "inscription_id": 1,
+   "ec_id": 40,
+   "mcc": 14.5,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 15,
+   "inscription_id": 1,
+   "ec_id": 41,
+   "mcc": 16.5,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 16,
+   "inscription_id": 1,
+   "ec_id": 42,
+   "mcc": 13.25,
+   "examen": 16.5,
+   "rattrapage": null
+  },
+  {
+   "id": 17,
+   "inscription_id": 1,
+   "ec_id": 43,
+   "mcc": 13.5,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 18,
+   "inscription_id": 1,
+   "ec_id": 44,
+   "mcc": 10.75,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 19,
+   "inscription_id": 1,
+   "ec_id": 45,
+   "mcc": 11.25,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 20,
+   "inscription_id": 2,
+   "ec_id": 27,
+   "mcc": 18.25,
+   "examen": 17.75,
+   "rattrapage": null
+  },
+  {
+   "id": 21,
+   "inscription_id": 2,
+   "ec_id": 28,
+   "mcc": 13.25,
+   "examen": 16.5,
+   "rattrapage": null
+  },
+  {
+   "id": 22,
+   "inscription_id": 2,
+   "ec_id": 29,
+   "mcc": 17.0,
+   "examen": 16.75,
+   "rattrapage": null
+  },
+  {
+   "id": 23,
+   "inscription_id": 2,
+   "ec_id": 30,
+   "mcc": 18.75,
+   "examen": 18.75,
+   "rattrapage": null
+  },
+  {
+   "id": 24,
+   "inscription_id": 2,
+   "ec_id": 31,
+   "mcc": 14.25,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 25,
+   "inscription_id": 2,
+   "ec_id": 32,
+   "mcc": 19.0,
+   "examen": 15.5,
+   "rattrapage": null
+  },
+  {
+   "id": 26,
+   "inscription_id": 2,
+   "ec_id": 33,
+   "mcc": 16.75,
+   "examen": 16.5,
+   "rattrapage": null
+  },
+  {
+   "id": 27,
+   "inscription_id": 2,
+   "ec_id": 34,
+   "mcc": 17.75,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 28,
+   "inscription_id": 2,
+   "ec_id": 35,
+   "mcc": 13.75,
+   "examen": 17.75,
+   "rattrapage": null
+  },
+  {
+   "id": 29,
+   "inscription_id": 2,
+   "ec_id": 36,
+   "mcc": 12.5,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 30,
+   "inscription_id": 2,
+   "ec_id": 37,
+   "mcc": 18.25,
+   "examen": 18.75,
+   "rattrapage": null
+  },
+  {
+   "id": 31,
+   "inscription_id": 2,
+   "ec_id": 38,
+   "mcc": 17.75,
+   "examen": 18.5,
+   "rattrapage": null
+  },
+  {
+   "id": 32,
+   "inscription_id": 2,
+   "ec_id": 39,
+   "mcc": 14.75,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 33,
+   "inscription_id": 2,
+   "ec_id": 40,
+   "mcc": 17.0,
+   "examen": 14.75,
+   "rattrapage": null
+  },
+  {
+   "id": 34,
+   "inscription_id": 2,
+   "ec_id": 41,
+   "mcc": 17.5,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 35,
+   "inscription_id": 2,
+   "ec_id": 42,
+   "mcc": 15.25,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 36,
+   "inscription_id": 2,
+   "ec_id": 43,
+   "mcc": 12.75,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 37,
+   "inscription_id": 2,
+   "ec_id": 44,
+   "mcc": 15.5,
+   "examen": 17.5,
+   "rattrapage": null
+  },
+  {
+   "id": 38,
+   "inscription_id": 2,
+   "ec_id": 45,
+   "mcc": 15.25,
+   "examen": 16.75,
+   "rattrapage": null
+  },
+  {
+   "id": 39,
+   "inscription_id": 3,
+   "ec_id": 27,
+   "mcc": 13.75,
+   "examen": 15.25,
+   "rattrapage": null
+  },
+  {
+   "id": 40,
+   "inscription_id": 3,
+   "ec_id": 28,
+   "mcc": 12.0,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 41,
+   "inscription_id": 3,
+   "ec_id": 29,
+   "mcc": 15.0,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 42,
+   "inscription_id": 3,
+   "ec_id": 30,
+   "mcc": 15.5,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 43,
+   "inscription_id": 3,
+   "ec_id": 31,
+   "mcc": 12.5,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 44,
+   "inscription_id": 3,
+   "ec_id": 32,
+   "mcc": 15.0,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 45,
+   "inscription_id": 3,
+   "ec_id": 33,
+   "mcc": 10.75,
+   "examen": 9.0,
+   "rattrapage": null
+  },
+  {
+   "id": 46,
+   "inscription_id": 3,
+   "ec_id": 34,
+   "mcc": 9.75,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 47,
+   "inscription_id": 3,
+   "ec_id": 35,
+   "mcc": 11.25,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 48,
+   "inscription_id": 3,
+   "ec_id": 36,
+   "mcc": 11.75,
+   "examen": 8.0,
+   "rattrapage": null
+  },
+  {
+   "id": 49,
+   "inscription_id": 3,
+   "ec_id": 37,
+   "mcc": 13.75,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 50,
+   "inscription_id": 3,
+   "ec_id": 38,
+   "mcc": 15.5,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 51,
+   "inscription_id": 3,
+   "ec_id": 39,
+   "mcc": 14.0,
+   "examen": 15.5,
+   "rattrapage": null
+  },
+  {
+   "id": 52,
+   "inscription_id": 3,
+   "ec_id": 40,
+   "mcc": 13.0,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 53,
+   "inscription_id": 3,
+   "ec_id": 41,
+   "mcc": 10.25,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 54,
+   "inscription_id": 3,
+   "ec_id": 42,
+   "mcc": 14.0,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 55,
+   "inscription_id": 3,
+   "ec_id": 43,
+   "mcc": 12.25,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 56,
+   "inscription_id": 3,
+   "ec_id": 44,
+   "mcc": 10.5,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 57,
+   "inscription_id": 3,
+   "ec_id": 45,
+   "mcc": 13.25,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 58,
+   "inscription_id": 4,
+   "ec_id": 27,
+   "mcc": 10.5,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 59,
+   "inscription_id": 4,
+   "ec_id": 28,
+   "mcc": 13.5,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 60,
+   "inscription_id": 4,
+   "ec_id": 29,
+   "mcc": 14.0,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 61,
+   "inscription_id": 4,
+   "ec_id": 30,
+   "mcc": 8.25,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 62,
+   "inscription_id": 4,
+   "ec_id": 31,
+   "mcc": 12.5,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 63,
+   "inscription_id": 4,
+   "ec_id": 32,
+   "mcc": 14.0,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 64,
+   "inscription_id": 4,
+   "ec_id": 33,
+   "mcc": 11.0,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 65,
+   "inscription_id": 4,
+   "ec_id": 34,
+   "mcc": 9.0,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 66,
+   "inscription_id": 4,
+   "ec_id": 35,
+   "mcc": 9.25,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 67,
+   "inscription_id": 4,
+   "ec_id": 36,
+   "mcc": 11.0,
+   "examen": 8.25,
+   "rattrapage": null
+  },
+  {
+   "id": 68,
+   "inscription_id": 4,
+   "ec_id": 37,
+   "mcc": 12.5,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 69,
+   "inscription_id": 4,
+   "ec_id": 38,
+   "mcc": 8.25,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 70,
+   "inscription_id": 4,
+   "ec_id": 39,
+   "mcc": 9.25,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 71,
+   "inscription_id": 4,
+   "ec_id": 40,
+   "mcc": 14.0,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 72,
+   "inscription_id": 4,
+   "ec_id": 41,
+   "mcc": 13.75,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 73,
+   "inscription_id": 4,
+   "ec_id": 42,
+   "mcc": 11.25,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 74,
+   "inscription_id": 4,
+   "ec_id": 43,
+   "mcc": 8.25,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 75,
+   "inscription_id": 4,
+   "ec_id": 44,
+   "mcc": 9.5,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 76,
+   "inscription_id": 4,
+   "ec_id": 45,
+   "mcc": 13.75,
+   "examen": 7.5,
+   "rattrapage": null
+  },
+  {
+   "id": 77,
+   "inscription_id": 5,
+   "ec_id": 27,
+   "mcc": 9.0,
+   "examen": 6.5,
+   "rattrapage": 11.75
+  },
+  {
+   "id": 78,
+   "inscription_id": 5,
+   "ec_id": 28,
+   "mcc": 13.0,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 79,
+   "inscription_id": 5,
+   "ec_id": 29,
+   "mcc": 8.5,
+   "examen": 6.5,
+   "rattrapage": 11.75
+  },
+  {
+   "id": 80,
+   "inscription_id": 5,
+   "ec_id": 30,
+   "mcc": 10.0,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 81,
+   "inscription_id": 5,
+   "ec_id": 31,
+   "mcc": 8.5,
+   "examen": 5.75,
+   "rattrapage": 10.0
+  },
+  {
+   "id": 82,
+   "inscription_id": 5,
+   "ec_id": 32,
+   "mcc": 7.25,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 83,
+   "inscription_id": 5,
+   "ec_id": 33,
+   "mcc": 8.75,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 84,
+   "inscription_id": 5,
+   "ec_id": 34,
+   "mcc": 12.0,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 85,
+   "inscription_id": 5,
+   "ec_id": 35,
+   "mcc": 7.75,
+   "examen": 5.25,
+   "rattrapage": null
+  },
+  {
+   "id": 86,
+   "inscription_id": 5,
+   "ec_id": 36,
+   "mcc": 9.0,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 87,
+   "inscription_id": 5,
+   "ec_id": 37,
+   "mcc": 11.75,
+   "examen": 6.75,
+   "rattrapage": null
+  },
+  {
+   "id": 88,
+   "inscription_id": 5,
+   "ec_id": 38,
+   "mcc": 10.75,
+   "examen": 7.25,
+   "rattrapage": null
+  },
+  {
+   "id": 89,
+   "inscription_id": 5,
+   "ec_id": 39,
+   "mcc": 11.5,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 90,
+   "inscription_id": 5,
+   "ec_id": 40,
+   "mcc": 10.25,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 91,
+   "inscription_id": 5,
+   "ec_id": 41,
+   "mcc": 11.0,
+   "examen": 6.25,
+   "rattrapage": null
+  },
+  {
+   "id": 92,
+   "inscription_id": 5,
+   "ec_id": 42,
+   "mcc": 11.75,
+   "examen": 5.75,
+   "rattrapage": null
+  },
+  {
+   "id": 93,
+   "inscription_id": 5,
+   "ec_id": 43,
+   "mcc": 9.5,
+   "examen": 6.0,
+   "rattrapage": 11.5
+  },
+  {
+   "id": 94,
+   "inscription_id": 5,
+   "ec_id": 44,
+   "mcc": 11.75,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 95,
+   "inscription_id": 5,
+   "ec_id": 45,
+   "mcc": 7.25,
+   "examen": 7.5,
+   "rattrapage": 10.25
+  },
+  {
+   "id": 96,
+   "inscription_id": 6,
+   "ec_id": 27,
+   "mcc": 13.75,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 97,
+   "inscription_id": 6,
+   "ec_id": 28,
+   "mcc": 11.75,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 98,
+   "inscription_id": 6,
+   "ec_id": 29,
+   "mcc": 11.75,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 99,
+   "inscription_id": 6,
+   "ec_id": 30,
+   "mcc": 14.75,
+   "examen": 17.0,
+   "rattrapage": null
+  },
+  {
+   "id": 100,
+   "inscription_id": 6,
+   "ec_id": 31,
+   "mcc": 13.25,
+   "examen": 15.75,
+   "rattrapage": null
+  },
+  {
+   "id": 101,
+   "inscription_id": 6,
+   "ec_id": 32,
+   "mcc": 15.0,
+   "examen": 14.75,
+   "rattrapage": null
+  },
+  {
+   "id": 102,
+   "inscription_id": 6,
+   "ec_id": 33,
+   "mcc": 15.0,
+   "examen": 17.0,
+   "rattrapage": null
+  },
+  {
+   "id": 103,
+   "inscription_id": 6,
+   "ec_id": 34,
+   "mcc": 13.0,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 104,
+   "inscription_id": 6,
+   "ec_id": 35,
+   "mcc": 14.0,
+   "examen": 17.25,
+   "rattrapage": null
+  },
+  {
+   "id": 105,
+   "inscription_id": 6,
+   "ec_id": 36,
+   "mcc": 16.75,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 106,
+   "inscription_id": 6,
+   "ec_id": 37,
+   "mcc": 16.5,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 107,
+   "inscription_id": 6,
+   "ec_id": 38,
+   "mcc": 17.0,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 108,
+   "inscription_id": 6,
+   "ec_id": 39,
+   "mcc": 17.25,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 109,
+   "inscription_id": 6,
+   "ec_id": 40,
+   "mcc": 15.75,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 110,
+   "inscription_id": 6,
+   "ec_id": 41,
+   "mcc": 11.25,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 111,
+   "inscription_id": 6,
+   "ec_id": 42,
+   "mcc": 13.0,
+   "examen": 17.25,
+   "rattrapage": null
+  },
+  {
+   "id": 112,
+   "inscription_id": 6,
+   "ec_id": 43,
+   "mcc": 16.25,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 113,
+   "inscription_id": 6,
+   "ec_id": 44,
+   "mcc": 16.0,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 114,
+   "inscription_id": 6,
+   "ec_id": 45,
+   "mcc": 16.75,
+   "examen": 13.75,
+   "rattrapage": null
+  },
+  {
+   "id": 115,
+   "inscription_id": 7,
+   "ec_id": 27,
+   "mcc": 8.25,
+   "examen": 6.25,
+   "rattrapage": 12.5
+  },
+  {
+   "id": 116,
+   "inscription_id": 7,
+   "ec_id": 28,
+   "mcc": 13.75,
+   "examen": 8.5,
+   "rattrapage": null
+  },
+  {
+   "id": 117,
+   "inscription_id": 7,
+   "ec_id": 29,
+   "mcc": 10.25,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 118,
+   "inscription_id": 7,
+   "ec_id": 30,
+   "mcc": 10.25,
+   "examen": 9.0,
+   "rattrapage": null
+  },
+  {
+   "id": 119,
+   "inscription_id": 7,
+   "ec_id": 31,
+   "mcc": 12.5,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 120,
+   "inscription_id": 7,
+   "ec_id": 32,
+   "mcc": 12.5,
+   "examen": 7.5,
+   "rattrapage": null
+  },
+  {
+   "id": 121,
+   "inscription_id": 7,
+   "ec_id": 33,
+   "mcc": 7.75,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 122,
+   "inscription_id": 7,
+   "ec_id": 34,
+   "mcc": 11.0,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 123,
+   "inscription_id": 7,
+   "ec_id": 35,
+   "mcc": 13.25,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 124,
+   "inscription_id": 7,
+   "ec_id": 36,
+   "mcc": 9.0,
+   "examen": 6.25,
+   "rattrapage": 11.75
+  },
+  {
+   "id": 125,
+   "inscription_id": 7,
+   "ec_id": 37,
+   "mcc": 13.75,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 126,
+   "inscription_id": 7,
+   "ec_id": 38,
+   "mcc": 11.5,
+   "examen": 6.75,
+   "rattrapage": null
+  },
+  {
+   "id": 127,
+   "inscription_id": 7,
+   "ec_id": 39,
+   "mcc": 8.75,
+   "examen": 6.25,
+   "rattrapage": null
+  },
+  {
+   "id": 128,
+   "inscription_id": 7,
+   "ec_id": 40,
+   "mcc": 12.75,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 129,
+   "inscription_id": 7,
+   "ec_id": 41,
+   "mcc": 9.75,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 130,
+   "inscription_id": 7,
+   "ec_id": 42,
+   "mcc": 12.25,
+   "examen": 6.5,
+   "rattrapage": null
+  },
+  {
+   "id": 131,
+   "inscription_id": 7,
+   "ec_id": 43,
+   "mcc": 13.0,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 132,
+   "inscription_id": 7,
+   "ec_id": 44,
+   "mcc": 9.0,
+   "examen": 6.5,
+   "rattrapage": 12.0
+  },
+  {
+   "id": 133,
+   "inscription_id": 7,
+   "ec_id": 45,
+   "mcc": 8.5,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 134,
+   "inscription_id": 8,
+   "ec_id": 27,
+   "mcc": 11.5,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 135,
+   "inscription_id": 8,
+   "ec_id": 28,
+   "mcc": 12.0,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 136,
+   "inscription_id": 8,
+   "ec_id": 29,
+   "mcc": 14.75,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 137,
+   "inscription_id": 8,
+   "ec_id": 30,
+   "mcc": 11.0,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 138,
+   "inscription_id": 8,
+   "ec_id": 31,
+   "mcc": 11.75,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 139,
+   "inscription_id": 8,
+   "ec_id": 32,
+   "mcc": 9.0,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 140,
+   "inscription_id": 8,
+   "ec_id": 33,
+   "mcc": 15.25,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 141,
+   "inscription_id": 8,
+   "ec_id": 34,
+   "mcc": 11.75,
+   "examen": 7.75,
+   "rattrapage": null
+  },
+  {
+   "id": 142,
+   "inscription_id": 8,
+   "ec_id": 35,
+   "mcc": 10.0,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 143,
+   "inscription_id": 8,
+   "ec_id": 36,
+   "mcc": 12.5,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 144,
+   "inscription_id": 8,
+   "ec_id": 37,
+   "mcc": 13.75,
+   "examen": 8.25,
+   "rattrapage": null
+  },
+  {
+   "id": 145,
+   "inscription_id": 8,
+   "ec_id": 38,
+   "mcc": 14.75,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 146,
+   "inscription_id": 8,
+   "ec_id": 39,
+   "mcc": 14.5,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 147,
+   "inscription_id": 8,
+   "ec_id": 40,
+   "mcc": 11.0,
+   "examen": 7.75,
+   "rattrapage": null
+  },
+  {
+   "id": 148,
+   "inscription_id": 8,
+   "ec_id": 41,
+   "mcc": 11.5,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 149,
+   "inscription_id": 8,
+   "ec_id": 42,
+   "mcc": 15.25,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 150,
+   "inscription_id": 8,
+   "ec_id": 43,
+   "mcc": 13.25,
+   "examen": 15.25,
+   "rattrapage": null
+  },
+  {
+   "id": 151,
+   "inscription_id": 8,
+   "ec_id": 44,
+   "mcc": 9.75,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 152,
+   "inscription_id": 8,
+   "ec_id": 45,
+   "mcc": 11.5,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 153,
+   "inscription_id": 9,
+   "ec_id": 27,
+   "mcc": 15.25,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 154,
+   "inscription_id": 9,
+   "ec_id": 28,
+   "mcc": 18.0,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 155,
+   "inscription_id": 9,
+   "ec_id": 29,
+   "mcc": 16.75,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 156,
+   "inscription_id": 9,
+   "ec_id": 30,
+   "mcc": 15.75,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 157,
+   "inscription_id": 9,
+   "ec_id": 31,
+   "mcc": 14.5,
+   "examen": 16.75,
+   "rattrapage": null
+  },
+  {
+   "id": 158,
+   "inscription_id": 9,
+   "ec_id": 32,
+   "mcc": 17.75,
+   "examen": 18.25,
+   "rattrapage": null
+  },
+  {
+   "id": 159,
+   "inscription_id": 9,
+   "ec_id": 33,
+   "mcc": 18.25,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 160,
+   "inscription_id": 9,
+   "ec_id": 34,
+   "mcc": 15.25,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 161,
+   "inscription_id": 9,
+   "ec_id": 35,
+   "mcc": 15.25,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 162,
+   "inscription_id": 9,
+   "ec_id": 36,
+   "mcc": 17.5,
+   "examen": 14.5,
+   "rattrapage": null
+  },
+  {
+   "id": 163,
+   "inscription_id": 9,
+   "ec_id": 37,
+   "mcc": 17.5,
+   "examen": 15.5,
+   "rattrapage": null
+  },
+  {
+   "id": 164,
+   "inscription_id": 9,
+   "ec_id": 38,
+   "mcc": 11.75,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 165,
+   "inscription_id": 9,
+   "ec_id": 39,
+   "mcc": 14.25,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 166,
+   "inscription_id": 9,
+   "ec_id": 40,
+   "mcc": 12.75,
+   "examen": 15.25,
+   "rattrapage": null
+  },
+  {
+   "id": 167,
+   "inscription_id": 9,
+   "ec_id": 41,
+   "mcc": 12.5,
+   "examen": 18.25,
+   "rattrapage": null
+  },
+  {
+   "id": 168,
+   "inscription_id": 9,
+   "ec_id": 42,
+   "mcc": 15.0,
+   "examen": 17.25,
+   "rattrapage": null
+  },
+  {
+   "id": 169,
+   "inscription_id": 9,
+   "ec_id": 43,
+   "mcc": 16.5,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 170,
+   "inscription_id": 9,
+   "ec_id": 44,
+   "mcc": 15.75,
+   "examen": 15.5,
+   "rattrapage": null
+  },
+  {
+   "id": 171,
+   "inscription_id": 9,
+   "ec_id": 45,
+   "mcc": 14.0,
+   "examen": 17.5,
+   "rattrapage": null
+  },
+  {
+   "id": 172,
+   "inscription_id": 10,
+   "ec_id": 27,
+   "mcc": 12.25,
+   "examen": 7.5,
+   "rattrapage": null
+  },
+  {
+   "id": 173,
+   "inscription_id": 10,
+   "ec_id": 28,
+   "mcc": 6.75,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 174,
+   "inscription_id": 10,
+   "ec_id": 29,
+   "mcc": 11.5,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 175,
+   "inscription_id": 10,
+   "ec_id": 30,
+   "mcc": 8.0,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 176,
+   "inscription_id": 10,
+   "ec_id": 31,
+   "mcc": 7.25,
+   "examen": 8.25,
+   "rattrapage": 11.25
+  },
+  {
+   "id": 177,
+   "inscription_id": 10,
+   "ec_id": 32,
+   "mcc": 12.0,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 178,
+   "inscription_id": 10,
+   "ec_id": 33,
+   "mcc": 9.5,
+   "examen": 7.25,
+   "rattrapage": null
+  },
+  {
+   "id": 179,
+   "inscription_id": 10,
+   "ec_id": 34,
+   "mcc": 7.5,
+   "examen": 8.5,
+   "rattrapage": null
+  },
+  {
+   "id": 180,
+   "inscription_id": 10,
+   "ec_id": 35,
+   "mcc": 11.75,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 181,
+   "inscription_id": 10,
+   "ec_id": 36,
+   "mcc": 11.25,
+   "examen": 7.5,
+   "rattrapage": null
+  },
+  {
+   "id": 182,
+   "inscription_id": 10,
+   "ec_id": 37,
+   "mcc": 11.5,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 183,
+   "inscription_id": 10,
+   "ec_id": 38,
+   "mcc": 7.5,
+   "examen": 8.25,
+   "rattrapage": 13.0
+  },
+  {
+   "id": 184,
+   "inscription_id": 10,
+   "ec_id": 39,
+   "mcc": 9.0,
+   "examen": 7.25,
+   "rattrapage": 11.0
+  },
+  {
+   "id": 185,
+   "inscription_id": 10,
+   "ec_id": 40,
+   "mcc": 11.75,
+   "examen": 6.75,
+   "rattrapage": null
+  },
+  {
+   "id": 186,
+   "inscription_id": 10,
+   "ec_id": 41,
+   "mcc": 9.75,
+   "examen": 6.75,
+   "rattrapage": 10.5
+  },
+  {
+   "id": 187,
+   "inscription_id": 10,
+   "ec_id": 42,
+   "mcc": 11.25,
+   "examen": 6.75,
+   "rattrapage": null
+  },
+  {
+   "id": 188,
+   "inscription_id": 10,
+   "ec_id": 43,
+   "mcc": 10.0,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 189,
+   "inscription_id": 10,
+   "ec_id": 44,
+   "mcc": 8.75,
+   "examen": null,
+   "rattrapage": null
+  },
+  {
+   "id": 190,
+   "inscription_id": 10,
+   "ec_id": 45,
+   "mcc": 8.25,
+   "examen": 8.0,
+   "rattrapage": null
+  },
+  {
+   "id": 191,
+   "inscription_id": 11,
+   "ec_id": 27,
+   "mcc": 16.5,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 192,
+   "inscription_id": 11,
+   "ec_id": 28,
+   "mcc": 17.5,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 193,
+   "inscription_id": 11,
+   "ec_id": 29,
+   "mcc": 15.75,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 194,
+   "inscription_id": 11,
+   "ec_id": 30,
+   "mcc": 15.0,
+   "examen": 17.25,
+   "rattrapage": null
+  },
+  {
+   "id": 195,
+   "inscription_id": 11,
+   "ec_id": 31,
+   "mcc": 14.0,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 196,
+   "inscription_id": 11,
+   "ec_id": 32,
+   "mcc": 17.25,
+   "examen": 18.25,
+   "rattrapage": null
+  },
+  {
+   "id": 197,
+   "inscription_id": 11,
+   "ec_id": 33,
+   "mcc": 18.5,
+   "examen": 18.5,
+   "rattrapage": null
+  },
+  {
+   "id": 198,
+   "inscription_id": 11,
+   "ec_id": 34,
+   "mcc": 16.25,
+   "examen": 11.75,
+   "rattrapage": null
+  },
+  {
+   "id": 199,
+   "inscription_id": 11,
+   "ec_id": 35,
+   "mcc": 18.0,
+   "examen": 16.75,
+   "rattrapage": null
+  },
+  {
+   "id": 200,
+   "inscription_id": 11,
+   "ec_id": 36,
+   "mcc": 17.5,
+   "examen": 19.25,
+   "rattrapage": null
+  },
+  {
+   "id": 201,
+   "inscription_id": 11,
+   "ec_id": 37,
+   "mcc": 15.25,
+   "examen": 18.0,
+   "rattrapage": null
+  },
+  {
+   "id": 202,
+   "inscription_id": 11,
+   "ec_id": 38,
+   "mcc": 18.25,
+   "examen": 15.75,
+   "rattrapage": null
+  },
+  {
+   "id": 203,
+   "inscription_id": 11,
+   "ec_id": 39,
+   "mcc": 17.25,
+   "examen": 14.75,
+   "rattrapage": null
+  },
+  {
+   "id": 204,
+   "inscription_id": 11,
+   "ec_id": 40,
+   "mcc": 16.75,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 205,
+   "inscription_id": 11,
+   "ec_id": 41,
+   "mcc": 18.25,
+   "examen": 19.5,
+   "rattrapage": null
+  },
+  {
+   "id": 206,
+   "inscription_id": 11,
+   "ec_id": 42,
+   "mcc": 14.25,
+   "examen": 19.5,
+   "rattrapage": null
+  },
+  {
+   "id": 207,
+   "inscription_id": 11,
+   "ec_id": 43,
+   "mcc": 19.25,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 208,
+   "inscription_id": 11,
+   "ec_id": 44,
+   "mcc": 17.5,
+   "examen": 17.25,
+   "rattrapage": null
+  },
+  {
+   "id": 209,
+   "inscription_id": 11,
+   "ec_id": 45,
+   "mcc": 13.75,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 210,
+   "inscription_id": 12,
+   "ec_id": 27,
+   "mcc": 14.0,
+   "examen": 6.75,
+   "rattrapage": null
+  },
+  {
+   "id": 211,
+   "inscription_id": 12,
+   "ec_id": 28,
+   "mcc": 11.5,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 212,
+   "inscription_id": 12,
+   "ec_id": 29,
+   "mcc": 9.25,
+   "examen": 13.75,
+   "rattrapage": null
+  },
+  {
+   "id": 213,
+   "inscription_id": 12,
+   "ec_id": 30,
+   "mcc": 10.75,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 214,
+   "inscription_id": 12,
+   "ec_id": 31,
+   "mcc": 10.0,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 215,
+   "inscription_id": 12,
+   "ec_id": 32,
+   "mcc": 11.0,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 216,
+   "inscription_id": 12,
+   "ec_id": 33,
+   "mcc": 10.0,
+   "examen": 8.25,
+   "rattrapage": null
+  },
+  {
+   "id": 217,
+   "inscription_id": 12,
+   "ec_id": 34,
+   "mcc": 12.0,
+   "examen": 7.25,
+   "rattrapage": null
+  },
+  {
+   "id": 218,
+   "inscription_id": 12,
+   "ec_id": 35,
+   "mcc": 11.0,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 219,
+   "inscription_id": 12,
+   "ec_id": 36,
+   "mcc": 13.25,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 220,
+   "inscription_id": 12,
+   "ec_id": 37,
+   "mcc": 10.25,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 221,
+   "inscription_id": 12,
+   "ec_id": 38,
+   "mcc": 12.5,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 222,
+   "inscription_id": 12,
+   "ec_id": 39,
+   "mcc": 11.5,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 223,
+   "inscription_id": 12,
+   "ec_id": 40,
+   "mcc": 13.5,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 224,
+   "inscription_id": 12,
+   "ec_id": 41,
+   "mcc": 12.0,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 225,
+   "inscription_id": 12,
+   "ec_id": 42,
+   "mcc": 11.25,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 226,
+   "inscription_id": 12,
+   "ec_id": 43,
+   "mcc": 14.25,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 227,
+   "inscription_id": 12,
+   "ec_id": 44,
+   "mcc": 13.25,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 228,
+   "inscription_id": 12,
+   "ec_id": 45,
+   "mcc": 11.75,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 229,
+   "inscription_id": 13,
+   "ec_id": 1,
+   "mcc": 16.25,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 230,
+   "inscription_id": 13,
+   "ec_id": 2,
+   "mcc": 13.5,
+   "examen": 15.5,
+   "rattrapage": null
+  },
+  {
+   "id": 231,
+   "inscription_id": 13,
+   "ec_id": 3,
+   "mcc": 14.0,
+   "examen": 16.0,
+   "rattrapage": null
+  },
+  {
+   "id": 232,
+   "inscription_id": 13,
+   "ec_id": 4,
+   "mcc": 16.25,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 233,
+   "inscription_id": 13,
+   "ec_id": 5,
+   "mcc": 11.5,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 234,
+   "inscription_id": 13,
+   "ec_id": 6,
+   "mcc": 15.5,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 235,
+   "inscription_id": 13,
+   "ec_id": 7,
+   "mcc": 11.25,
+   "examen": 15.5,
+   "rattrapage": null
+  },
+  {
+   "id": 236,
+   "inscription_id": 13,
+   "ec_id": 8,
+   "mcc": 15.0,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 237,
+   "inscription_id": 13,
+   "ec_id": 9,
+   "mcc": 11.0,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 238,
+   "inscription_id": 13,
+   "ec_id": 10,
+   "mcc": 15.5,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 239,
+   "inscription_id": 13,
+   "ec_id": 11,
+   "mcc": 14.25,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 240,
+   "inscription_id": 13,
+   "ec_id": 12,
+   "mcc": 14.75,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 241,
+   "inscription_id": 13,
+   "ec_id": 13,
+   "mcc": 14.0,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 242,
+   "inscription_id": 13,
+   "ec_id": 14,
+   "mcc": 11.0,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 243,
+   "inscription_id": 13,
+   "ec_id": 15,
+   "mcc": 15.25,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 244,
+   "inscription_id": 13,
+   "ec_id": 16,
+   "mcc": 13.75,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 245,
+   "inscription_id": 13,
+   "ec_id": 17,
+   "mcc": 15.75,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 246,
+   "inscription_id": 13,
+   "ec_id": 18,
+   "mcc": 12.0,
+   "examen": 15.0,
+   "rattrapage": null
+  },
+  {
+   "id": 247,
+   "inscription_id": 13,
+   "ec_id": 19,
+   "mcc": 11.0,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 248,
+   "inscription_id": 13,
+   "ec_id": 20,
+   "mcc": 14.5,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 249,
+   "inscription_id": 13,
+   "ec_id": 21,
+   "mcc": 11.0,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 250,
+   "inscription_id": 13,
+   "ec_id": 22,
+   "mcc": 15.0,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 251,
+   "inscription_id": 13,
+   "ec_id": 23,
+   "mcc": 12.75,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 252,
+   "inscription_id": 13,
+   "ec_id": 24,
+   "mcc": 16.0,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 253,
+   "inscription_id": 13,
+   "ec_id": 25,
+   "mcc": 12.0,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 254,
+   "inscription_id": 13,
+   "ec_id": 26,
+   "mcc": 15.75,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 255,
+   "inscription_id": 14,
+   "ec_id": 1,
+   "mcc": 6.5,
+   "examen": 5.75,
+   "rattrapage": 12.75
+  },
+  {
+   "id": 256,
+   "inscription_id": 14,
+   "ec_id": 2,
+   "mcc": 11.75,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 257,
+   "inscription_id": 14,
+   "ec_id": 3,
+   "mcc": 11.25,
+   "examen": 6.25,
+   "rattrapage": null
+  },
+  {
+   "id": 258,
+   "inscription_id": 14,
+   "ec_id": 4,
+   "mcc": 7.75,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 259,
+   "inscription_id": 14,
+   "ec_id": 5,
+   "mcc": 9.25,
+   "examen": 8.25,
+   "rattrapage": null
+  },
+  {
+   "id": 260,
+   "inscription_id": 14,
+   "ec_id": 6,
+   "mcc": 11.75,
+   "examen": 6.25,
+   "rattrapage": null
+  },
+  {
+   "id": 261,
+   "inscription_id": 14,
+   "ec_id": 7,
+   "mcc": 7.75,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 262,
+   "inscription_id": 14,
+   "ec_id": 8,
+   "mcc": 7.75,
+   "examen": 6.25,
+   "rattrapage": null
+  },
+  {
+   "id": 263,
+   "inscription_id": 14,
+   "ec_id": 9,
+   "mcc": 9.25,
+   "examen": 8.25,
+   "rattrapage": null
+  },
+  {
+   "id": 264,
+   "inscription_id": 14,
+   "ec_id": 10,
+   "mcc": 12.0,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 265,
+   "inscription_id": 14,
+   "ec_id": 11,
+   "mcc": 12.75,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 266,
+   "inscription_id": 14,
+   "ec_id": 12,
+   "mcc": 9.25,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 267,
+   "inscription_id": 14,
+   "ec_id": 13,
+   "mcc": 10.25,
+   "examen": 5.75,
+   "rattrapage": null
+  },
+  {
+   "id": 268,
+   "inscription_id": 14,
+   "ec_id": 14,
+   "mcc": 11.25,
+   "examen": 5.75,
+   "rattrapage": 12.75
+  },
+  {
+   "id": 269,
+   "inscription_id": 14,
+   "ec_id": 15,
+   "mcc": 10.5,
+   "examen": 6.25,
+   "rattrapage": 12.5
+  },
+  {
+   "id": 270,
+   "inscription_id": 14,
+   "ec_id": 16,
+   "mcc": 7.75,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 271,
+   "inscription_id": 14,
+   "ec_id": 17,
+   "mcc": 12.75,
+   "examen": 5.25,
+   "rattrapage": null
+  },
+  {
+   "id": 272,
+   "inscription_id": 14,
+   "ec_id": 18,
+   "mcc": 12.75,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 273,
+   "inscription_id": 14,
+   "ec_id": 19,
+   "mcc": 12.25,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 274,
+   "inscription_id": 14,
+   "ec_id": 20,
+   "mcc": 8.25,
+   "examen": 7.75,
+   "rattrapage": 12.0
+  },
+  {
+   "id": 275,
+   "inscription_id": 14,
+   "ec_id": 21,
+   "mcc": 12.25,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 276,
+   "inscription_id": 14,
+   "ec_id": 22,
+   "mcc": 9.5,
+   "examen": 6.0,
+   "rattrapage": null
+  },
+  {
+   "id": 277,
+   "inscription_id": 14,
+   "ec_id": 23,
+   "mcc": 10.0,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 278,
+   "inscription_id": 14,
+   "ec_id": 24,
+   "mcc": 9.25,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 279,
+   "inscription_id": 14,
+   "ec_id": 25,
+   "mcc": 10.25,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 280,
+   "inscription_id": 14,
+   "ec_id": 26,
+   "mcc": 10.75,
+   "examen": 7.5,
+   "rattrapage": null
+  },
+  {
+   "id": 281,
+   "inscription_id": 15,
+   "ec_id": 1,
+   "mcc": 17.25,
+   "examen": 18.0,
+   "rattrapage": null
+  },
+  {
+   "id": 282,
+   "inscription_id": 15,
+   "ec_id": 2,
+   "mcc": 17.25,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 283,
+   "inscription_id": 15,
+   "ec_id": 3,
+   "mcc": 12.5,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 284,
+   "inscription_id": 15,
+   "ec_id": 4,
+   "mcc": 15.5,
+   "examen": 14.0,
+   "rattrapage": null
+  },
+  {
+   "id": 285,
+   "inscription_id": 15,
+   "ec_id": 5,
+   "mcc": 12.75,
+   "examen": 17.0,
+   "rattrapage": null
+  },
+  {
+   "id": 286,
+   "inscription_id": 15,
+   "ec_id": 6,
+   "mcc": 17.25,
+   "examen": 18.25,
+   "rattrapage": null
+  },
+  {
+   "id": 287,
+   "inscription_id": 15,
+   "ec_id": 7,
+   "mcc": 16.0,
+   "examen": 14.75,
+   "rattrapage": null
+  },
+  {
+   "id": 288,
+   "inscription_id": 15,
+   "ec_id": 8,
+   "mcc": 13.0,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 289,
+   "inscription_id": 15,
+   "ec_id": 9,
+   "mcc": 12.25,
+   "examen": 13.75,
+   "rattrapage": null
+  },
+  {
+   "id": 290,
+   "inscription_id": 15,
+   "ec_id": 10,
+   "mcc": 13.0,
+   "examen": 17.5,
+   "rattrapage": null
+  },
+  {
+   "id": 291,
+   "inscription_id": 15,
+   "ec_id": 11,
+   "mcc": 12.0,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 292,
+   "inscription_id": 15,
+   "ec_id": 12,
+   "mcc": 18.25,
+   "examen": 16.5,
+   "rattrapage": null
+  },
+  {
+   "id": 293,
+   "inscription_id": 15,
+   "ec_id": 13,
+   "mcc": 15.5,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 294,
+   "inscription_id": 15,
+   "ec_id": 14,
+   "mcc": 17.5,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 295,
+   "inscription_id": 15,
+   "ec_id": 15,
+   "mcc": 13.0,
+   "examen": 18.25,
+   "rattrapage": null
+  },
+  {
+   "id": 296,
+   "inscription_id": 15,
+   "ec_id": 16,
+   "mcc": 13.5,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 297,
+   "inscription_id": 15,
+   "ec_id": 17,
+   "mcc": 15.0,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 298,
+   "inscription_id": 15,
+   "ec_id": 18,
+   "mcc": 13.5,
+   "examen": 17.5,
+   "rattrapage": null
+  },
+  {
+   "id": 299,
+   "inscription_id": 15,
+   "ec_id": 19,
+   "mcc": 14.0,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 300,
+   "inscription_id": 15,
+   "ec_id": 20,
+   "mcc": 13.5,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 301,
+   "inscription_id": 15,
+   "ec_id": 21,
+   "mcc": 13.25,
+   "examen": 11.5,
+   "rattrapage": null
+  },
+  {
+   "id": 302,
+   "inscription_id": 15,
+   "ec_id": 22,
+   "mcc": 15.0,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 303,
+   "inscription_id": 15,
+   "ec_id": 23,
+   "mcc": 15.5,
+   "examen": 14.5,
+   "rattrapage": null
+  },
+  {
+   "id": 304,
+   "inscription_id": 15,
+   "ec_id": 24,
+   "mcc": 13.5,
+   "examen": 16.25,
+   "rattrapage": null
+  },
+  {
+   "id": 305,
+   "inscription_id": 15,
+   "ec_id": 25,
+   "mcc": 15.5,
+   "examen": 16.75,
+   "rattrapage": null
+  },
+  {
+   "id": 306,
+   "inscription_id": 15,
+   "ec_id": 26,
+   "mcc": 14.0,
+   "examen": 17.5,
+   "rattrapage": null
+  },
+  {
+   "id": 307,
+   "inscription_id": 16,
+   "ec_id": 1,
+   "mcc": 9.25,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 308,
+   "inscription_id": 16,
+   "ec_id": 2,
+   "mcc": 11.75,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 309,
+   "inscription_id": 16,
+   "ec_id": 3,
+   "mcc": 12.0,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 310,
+   "inscription_id": 16,
+   "ec_id": 4,
+   "mcc": 11.25,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 311,
+   "inscription_id": 16,
+   "ec_id": 5,
+   "mcc": 13.5,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 312,
+   "inscription_id": 16,
+   "ec_id": 6,
+   "mcc": 11.0,
+   "examen": 14.5,
+   "rattrapage": null
+  },
+  {
+   "id": 313,
+   "inscription_id": 16,
+   "ec_id": 7,
+   "mcc": 9.75,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 314,
+   "inscription_id": 16,
+   "ec_id": 8,
+   "mcc": 13.0,
+   "examen": 8.0,
+   "rattrapage": null
+  },
+  {
+   "id": 315,
+   "inscription_id": 16,
+   "ec_id": 9,
+   "mcc": 10.0,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 316,
+   "inscription_id": 16,
+   "ec_id": 10,
+   "mcc": 9.75,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 317,
+   "inscription_id": 16,
+   "ec_id": 11,
+   "mcc": 8.5,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 318,
+   "inscription_id": 16,
+   "ec_id": 12,
+   "mcc": 12.25,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 319,
+   "inscription_id": 16,
+   "ec_id": 13,
+   "mcc": 9.0,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 320,
+   "inscription_id": 16,
+   "ec_id": 14,
+   "mcc": 12.5,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 321,
+   "inscription_id": 16,
+   "ec_id": 15,
+   "mcc": 14.0,
+   "examen": 14.5,
+   "rattrapage": null
+  },
+  {
+   "id": 322,
+   "inscription_id": 16,
+   "ec_id": 16,
+   "mcc": 11.25,
+   "examen": 14.25,
+   "rattrapage": null
+  },
+  {
+   "id": 323,
+   "inscription_id": 16,
+   "ec_id": 17,
+   "mcc": 12.25,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 324,
+   "inscription_id": 16,
+   "ec_id": 18,
+   "mcc": 14.25,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 325,
+   "inscription_id": 16,
+   "ec_id": 19,
+   "mcc": 9.5,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 326,
+   "inscription_id": 16,
+   "ec_id": 20,
+   "mcc": 11.25,
+   "examen": 9.0,
+   "rattrapage": null
+  },
+  {
+   "id": 327,
+   "inscription_id": 16,
+   "ec_id": 21,
+   "mcc": 9.25,
+   "examen": 7.25,
+   "rattrapage": null
+  },
+  {
+   "id": 328,
+   "inscription_id": 16,
+   "ec_id": 22,
+   "mcc": 9.5,
+   "examen": 9.0,
+   "rattrapage": null
+  },
+  {
+   "id": 329,
+   "inscription_id": 16,
+   "ec_id": 23,
+   "mcc": 12.5,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 330,
+   "inscription_id": 16,
+   "ec_id": 24,
+   "mcc": 10.0,
+   "examen": 13.75,
+   "rattrapage": null
+  },
+  {
+   "id": 331,
+   "inscription_id": 16,
+   "ec_id": 25,
+   "mcc": 13.0,
+   "examen": 8.0,
+   "rattrapage": null
+  },
+  {
+   "id": 332,
+   "inscription_id": 16,
+   "ec_id": 26,
+   "mcc": 12.25,
+   "examen": 11.25,
+   "rattrapage": null
+  },
+  {
+   "id": 333,
+   "inscription_id": 17,
+   "ec_id": 1,
+   "mcc": 12.5,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 334,
+   "inscription_id": 17,
+   "ec_id": 2,
+   "mcc": 9.5,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 335,
+   "inscription_id": 17,
+   "ec_id": 3,
+   "mcc": 10.0,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 336,
+   "inscription_id": 17,
+   "ec_id": 4,
+   "mcc": 10.5,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 337,
+   "inscription_id": 17,
+   "ec_id": 5,
+   "mcc": 13.0,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 338,
+   "inscription_id": 17,
+   "ec_id": 6,
+   "mcc": 11.5,
+   "examen": 10.25,
+   "rattrapage": null
+  },
+  {
+   "id": 339,
+   "inscription_id": 17,
+   "ec_id": 7,
+   "mcc": 13.5,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 340,
+   "inscription_id": 17,
+   "ec_id": 8,
+   "mcc": 10.0,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 341,
+   "inscription_id": 17,
+   "ec_id": 9,
+   "mcc": 14.25,
+   "examen": 9.0,
+   "rattrapage": null
+  },
+  {
+   "id": 342,
+   "inscription_id": 17,
+   "ec_id": 10,
+   "mcc": 15.5,
+   "examen": 14.75,
+   "rattrapage": null
+  },
+  {
+   "id": 343,
+   "inscription_id": 17,
+   "ec_id": 11,
+   "mcc": 14.5,
+   "examen": 14.5,
+   "rattrapage": null
+  },
+  {
+   "id": 344,
+   "inscription_id": 17,
+   "ec_id": 12,
+   "mcc": 12.5,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 345,
+   "inscription_id": 17,
+   "ec_id": 13,
+   "mcc": 13.75,
+   "examen": 10.5,
+   "rattrapage": null
+  },
+  {
+   "id": 346,
+   "inscription_id": 17,
+   "ec_id": 14,
+   "mcc": 12.5,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 347,
+   "inscription_id": 17,
+   "ec_id": 15,
+   "mcc": 9.5,
+   "examen": 11.0,
+   "rattrapage": null
+  },
+  {
+   "id": 348,
+   "inscription_id": 17,
+   "ec_id": 16,
+   "mcc": 15.75,
+   "examen": 12.0,
+   "rattrapage": null
+  },
+  {
+   "id": 349,
+   "inscription_id": 17,
+   "ec_id": 17,
+   "mcc": 12.0,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 350,
+   "inscription_id": 17,
+   "ec_id": 18,
+   "mcc": 12.75,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 351,
+   "inscription_id": 17,
+   "ec_id": 19,
+   "mcc": 14.25,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 352,
+   "inscription_id": 17,
+   "ec_id": 20,
+   "mcc": 13.75,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 353,
+   "inscription_id": 17,
+   "ec_id": 21,
+   "mcc": 11.75,
+   "examen": 9.75,
+   "rattrapage": null
+  },
+  {
+   "id": 354,
+   "inscription_id": 17,
+   "ec_id": 22,
+   "mcc": 11.25,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 355,
+   "inscription_id": 17,
+   "ec_id": 23,
+   "mcc": 13.75,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 356,
+   "inscription_id": 17,
+   "ec_id": 24,
+   "mcc": 11.5,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 357,
+   "inscription_id": 17,
+   "ec_id": 25,
+   "mcc": 15.75,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 358,
+   "inscription_id": 17,
+   "ec_id": 26,
+   "mcc": 14.25,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 359,
+   "inscription_id": 18,
+   "ec_id": 1,
+   "mcc": 13.25,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 360,
+   "inscription_id": 18,
+   "ec_id": 2,
+   "mcc": 7.75,
+   "examen": 5.75,
+   "rattrapage": 10.5
+  },
+  {
+   "id": 361,
+   "inscription_id": 18,
+   "ec_id": 3,
+   "mcc": 13.25,
+   "examen": 5.75,
+   "rattrapage": null
+  },
+  {
+   "id": 362,
+   "inscription_id": 18,
+   "ec_id": 4,
+   "mcc": 11.25,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 363,
+   "inscription_id": 18,
+   "ec_id": 5,
+   "mcc": 9.75,
+   "examen": 10.75,
+   "rattrapage": null
+  },
+  {
+   "id": 364,
+   "inscription_id": 18,
+   "ec_id": 6,
+   "mcc": 10.0,
+   "examen": 6.75,
+   "rattrapage": null
+  },
+  {
+   "id": 365,
+   "inscription_id": 18,
+   "ec_id": 7,
+   "mcc": 8.75,
+   "examen": 8.25,
+   "rattrapage": null
+  },
+  {
+   "id": 366,
+   "inscription_id": 18,
+   "ec_id": 8,
+   "mcc": 12.5,
+   "examen": 12.5,
+   "rattrapage": null
+  },
+  {
+   "id": 367,
+   "inscription_id": 18,
+   "ec_id": 9,
+   "mcc": 13.5,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 368,
+   "inscription_id": 18,
+   "ec_id": 10,
+   "mcc": 10.0,
+   "examen": 13.25,
+   "rattrapage": null
+  },
+  {
+   "id": 369,
+   "inscription_id": 18,
+   "ec_id": 11,
+   "mcc": 9.25,
+   "examen": 9.25,
+   "rattrapage": null
+  },
+  {
+   "id": 370,
+   "inscription_id": 18,
+   "ec_id": 12,
+   "mcc": 11.25,
+   "examen": 9.5,
+   "rattrapage": null
+  },
+  {
+   "id": 371,
+   "inscription_id": 18,
+   "ec_id": 13,
+   "mcc": 12.75,
+   "examen": 12.25,
+   "rattrapage": null
+  },
+  {
+   "id": 372,
+   "inscription_id": 18,
+   "ec_id": 14,
+   "mcc": 7.75,
+   "examen": 10.0,
+   "rattrapage": null
+  },
+  {
+   "id": 373,
+   "inscription_id": 18,
+   "ec_id": 15,
+   "mcc": 8.5,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 374,
+   "inscription_id": 18,
+   "ec_id": 16,
+   "mcc": 9.0,
+   "examen": 13.5,
+   "rattrapage": null
+  },
+  {
+   "id": 375,
+   "inscription_id": 18,
+   "ec_id": 17,
+   "mcc": 13.75,
+   "examen": 7.5,
+   "rattrapage": null
+  },
+  {
+   "id": 376,
+   "inscription_id": 18,
+   "ec_id": 18,
+   "mcc": 11.75,
+   "examen": 8.25,
+   "rattrapage": null
+  },
+  {
+   "id": 377,
+   "inscription_id": 18,
+   "ec_id": 19,
+   "mcc": 12.5,
+   "examen": 7.5,
+   "rattrapage": null
+  },
+  {
+   "id": 378,
+   "inscription_id": 18,
+   "ec_id": 20,
+   "mcc": 8.0,
+   "examen": 8.5,
+   "rattrapage": null
+  },
+  {
+   "id": 379,
+   "inscription_id": 18,
+   "ec_id": 21,
+   "mcc": 10.75,
+   "examen": 7.25,
+   "rattrapage": null
+  },
+  {
+   "id": 380,
+   "inscription_id": 18,
+   "ec_id": 22,
+   "mcc": 10.75,
+   "examen": 13.0,
+   "rattrapage": null
+  },
+  {
+   "id": 381,
+   "inscription_id": 18,
+   "ec_id": 23,
+   "mcc": 10.75,
+   "examen": 8.75,
+   "rattrapage": null
+  },
+  {
+   "id": 382,
+   "inscription_id": 18,
+   "ec_id": 24,
+   "mcc": 9.0,
+   "examen": 12.75,
+   "rattrapage": null
+  },
+  {
+   "id": 383,
+   "inscription_id": 18,
+   "ec_id": 25,
+   "mcc": 10.25,
+   "examen": 7.0,
+   "rattrapage": null
+  },
+  {
+   "id": 384,
+   "inscription_id": 18,
+   "ec_id": 26,
+   "mcc": 9.25,
+   "examen": 11.5,
+   "rattrapage": null
+  }
+ ]
+}

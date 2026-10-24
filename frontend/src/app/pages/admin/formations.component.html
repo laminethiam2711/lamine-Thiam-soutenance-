@@ -1,0 +1,94 @@
+<div class="page-entete">
+  <div>
+    <h1>Formations</h1>
+    <p>Offre de formation de l'établissement : domaine, mention et spécialité, comme sur les bulletins.</p>
+  </div>
+  <button class="btn btn-primaire" (click)="ouvrir('domaine')"><app-icone nom="plus" /> Nouveau domaine</button>
+</div>
+
+@if (domaines(); as liste) {
+  @for (d of liste; track d.id) {
+    <div class="carte domaine">
+      <div class="carte-entete">
+        <h2><span class="eyebrow">Domaine</span><br>{{ d.libelle }}</h2>
+        <div class="boutons">
+          <button class="btn btn-secondaire btn-petit" (click)="ouvrir('mention', undefined, d.id)"><app-icone nom="plus" [taille]="15" /> Mention</button>
+          <button class="btn-icone" title="Modifier" (click)="ouvrir('domaine', d)"><app-icone nom="modifier" [taille]="16" /></button>
+          <button class="btn-icone danger" title="Supprimer" (click)="supprimer('domaine', d)"><app-icone nom="supprimer" [taille]="16" /></button>
+        </div>
+      </div>
+      @for (m of d.mentions; track m.id) {
+        <div class="mention">
+          <div class="tete-mention">
+            <h3><span class="eyebrow">Mention</span> · {{ m.libelle }}</h3>
+            <button class="btn btn-secondaire btn-petit" (click)="ouvrir('specialite', undefined, m.id)"><app-icone nom="plus" [taille]="15" /> Spécialité</button>
+            <button class="btn-icone" title="Modifier" (click)="ouvrir('mention', m)"><app-icone nom="modifier" [taille]="16" /></button>
+            <button class="btn-icone danger" title="Supprimer" (click)="supprimer('mention', m)"><app-icone nom="supprimer" [taille]="16" /></button>
+          </div>
+          <div class="table-conteneur">
+            <table>
+              <thead><tr><th>Code</th><th>Spécialité</th><th></th></tr></thead>
+              <tbody>
+                @for (s of m.specialites; track s.id) {
+                  <tr>
+                    <td class="code">{{ s.code }}</td>
+                    <td>{{ s.libelle }}</td>
+                    <td class="actions">
+                      <button class="btn-icone" title="Modifier" (click)="ouvrir('specialite', s)"><app-icone nom="modifier" [taille]="16" /></button>
+                      <button class="btn-icone danger" title="Supprimer" (click)="supprimer('specialite', s)"><app-icone nom="supprimer" [taille]="16" /></button>
+                    </td>
+                  </tr>
+                } @empty {
+                  <tr><td colspan="3" class="vide">Aucune spécialité dans cette mention.</td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      } @empty {
+        <div class="vide">Aucune mention dans ce domaine.</div>
+      }
+    </div>
+  } @empty {
+    <div class="carte vide">Aucun domaine. Commencez par créer « Sciences et Technologies ».</div>
+  }
+} @else { <app-chargement /> }
+
+@if (modal(); as type) {
+  <app-modal [titre]="(editionId ? 'Modifier la ' : 'Nouvelle ') + titres[type]" [largeur]="520" (fermer)="modal.set(null)">
+    <form (ngSubmit)="enregistrer()">
+      @if (erreur()) { <div class="erreur-form">{{ erreur() }}</div> }
+      <div class="grille-form">
+        @if (type === 'mention') {
+          <div class="champ pleine">
+            <label for="f-domaine">Domaine</label>
+            <select id="f-domaine" name="domaine" [(ngModel)]="form.domaine_id">
+              @for (d of domaines(); track d.id) { <option [ngValue]="d.id">{{ d.libelle }}</option> }
+            </select>
+          </div>
+        }
+        @if (type === 'specialite') {
+          <div class="champ pleine">
+            <label for="f-mention">Mention</label>
+            <select id="f-mention" name="mention" [(ngModel)]="form.mention_id">
+              @for (m of mentions(); track m.id) { <option [ngValue]="m.id">{{ m.libelle }} ({{ m.domaine_libelle }})</option> }
+            </select>
+          </div>
+          <div class="champ">
+            <label for="f-code">Code</label>
+            <input id="f-code" name="code" [(ngModel)]="form.code" placeholder="ex. IAGE" />
+          </div>
+        }
+        <div class="champ" [class.pleine]="type !== 'specialite'">
+          <label for="f-libelle">Libellé</label>
+          <input id="f-libelle" name="libelle" [(ngModel)]="form.libelle"
+            [placeholder]="type === 'domaine' ? 'ex. Sciences et Technologies' : type === 'mention' ? 'ex. Informatique' : 'ex. Informatique appliquée à la gestion des entreprises'" />
+        </div>
+      </div>
+      <div class="pied-modal">
+        <button type="button" class="btn btn-secondaire" (click)="modal.set(null)">Annuler</button>
+        <button class="btn btn-primaire" [disabled]="enCours()">Enregistrer</button>
+      </div>
+    </form>
+  </app-modal>
+}

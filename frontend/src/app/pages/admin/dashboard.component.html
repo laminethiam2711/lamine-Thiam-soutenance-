@@ -1,0 +1,80 @@
+<div class="page-entete">
+  <div>
+    <h1>Tableau de bord</h1>
+    <p>Vue d'ensemble de la scolarité et des résultats de l'année.</p>
+  </div>
+  <a class="btn btn-primaire" routerLink="/admin/resultats">Voir les résultats</a>
+</div>
+
+@if (data(); as d) {
+  <div class="stats">
+    <div class="carte stat"><div class="libelle">Étudiants</div><div class="valeur">{{ d.totaux.etudiants }}</div><div class="detail">inscrits</div></div>
+    <div class="carte stat"><div class="libelle">Enseignants</div><div class="valeur">{{ d.totaux.enseignants }}</div><div class="detail">actifs</div></div>
+    <div class="carte stat"><div class="libelle">Classes</div><div class="valeur">{{ d.totaux.classes }}</div><div class="detail">{{ d.totaux.ues }} UE · {{ d.totaux.ecs }} EC</div></div>
+    <div class="carte stat"><div class="libelle">Notes saisies</div><div class="valeur">{{ d.totaux.notes }}</div><div class="detail">MCC, examens, rattrapages</div></div>
+    <div class="carte stat mise-en-avant">
+      <div class="libelle">Taux de réussite</div>
+      <div class="valeur">{{ d.taux_reussite ?? '—' }}<small>%</small></div>
+      <div class="detail">admis en classe supérieure</div>
+    </div>
+  </div>
+
+  <div class="grille-2">
+    <div class="carte">
+      <div class="carte-entete"><h2>Résultats par classe</h2></div>
+      <div class="carte-corps liste-classes">
+        @for (c of d.par_classe; track c.classe) {
+          <div class="ligne-classe">
+            <div class="tete-classe">
+              <strong>{{ c.classe }}</strong>
+              <span class="secondaire">{{ c.effectif }} étudiants · moyenne <b [class]="classeNote(c.moyenne)">{{ c.moyenne | note }}</b></span>
+            </div>
+            <div class="barre"><div class="rempli" [style.width.%]="c.taux_reussite ?? 0"></div></div>
+            <div class="secondaire">{{ c.taux_reussite ?? 0 }} % admis en classe supérieure</div>
+          </div>
+        } @empty {
+          <div class="vide">Aucune classe.</div>
+        }
+      </div>
+    </div>
+
+    <div class="carte">
+      <div class="carte-entete"><h2>Répartition des appréciations</h2></div>
+      <div class="carte-corps liste-mentions">
+        @for (m of mentions(); track m.libelle) {
+          <div class="ligne-mention">
+            <span class="nom-mention">{{ m.libelle }}</span>
+            <div class="barre"><div class="rempli" [class]="'rempli m-' + $index" [style.width.%]="m.pct"></div></div>
+            <span class="chiffre nb">{{ m.nombre }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="carte" style="margin-top: 20px">
+    <div class="carte-entete"><h2>Meilleurs étudiants</h2></div>
+    <div class="table-conteneur">
+      <table>
+        <thead><tr><th>#</th><th>Étudiant</th><th>Classe</th><th class="num">Moy. générale</th><th>Crédits</th><th>Appréciation</th><th></th></tr></thead>
+        <tbody>
+          @for (e of d.meilleurs; track e.etudiant_id) {
+            <tr>
+              <td class="chiffre">{{ $index + 1 }}</td>
+              <td><strong>{{ e.nom_complet }}</strong><div class="secondaire">{{ e.identifiant }}</div></td>
+              <td>{{ e.classe }}</td>
+              <td class="num"><span [class]="classeNote(e.moyenne)">{{ e.moyenne | note }}</span></td>
+              <td class="chiffre">{{ e.credits }} / {{ e.credits_requis }}</td>
+              <td><span [class]="classeBadge(e.appreciation)">{{ e.appreciation }}</span></td>
+              <td class="actions"><a [routerLink]="['/admin/etudiants', e.etudiant_id, 'bulletin']">Bulletin</a></td>
+            </tr>
+          } @empty {
+            <tr><td colspan="7" class="vide">Aucune note enregistrée pour l'instant.</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+} @else {
+  <app-chargement />
+}

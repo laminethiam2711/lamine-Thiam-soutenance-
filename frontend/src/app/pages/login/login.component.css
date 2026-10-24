@@ -1,0 +1,51 @@
+.ecran { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 100vh; }
+
+.presentation {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(79, 140, 255, .22), transparent 45%),
+    linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 55%, var(--navy-950) 100%);
+  color: #d5e2f5; padding: 44px 56px; display: flex; flex-direction: column;
+}
+/* Quadrillage discret, comme une feuille de notes */
+.presentation::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.presentation > * { position: relative; }
+.marque { display: flex; align-items: center; gap: 12px; color: #fff; font-weight: 750; font-size: 18px; }
+.logo { width: 42px; height: 42px; border-radius: 11px; background: var(--bleu); display: flex; align-items: center; justify-content: center; }
+.accroche { margin: auto 0; max-width: 520px; }
+.accroche h1 { color: #fff; font-size: 34px; line-height: 1.18; font-weight: 750; letter-spacing: -.02em; }
+.accroche p { font-size: 16px; line-height: 1.6; color: #a9bfe0; margin: 18px 0 30px; }
+ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+li { display: flex; align-items: center; gap: 12px; font-weight: 550; }
+li app-icone { color: var(--bleu-clair); }
+.pied { font-size: 13px; color: #7d96bb; }
+
+.formulaire { display: flex; align-items: center; justify-content: center; padding: 40px 24px; background: var(--fond); }
+form { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 18px; }
+h2 { font-size: 26px; }
+.intro { margin: -10px 0 4px; color: var(--texte-doux); }
+.valider { height: 44px; font-size: 15px; margin-top: 4px; }
+
+.demo { margin-top: 10px; padding-top: 18px; border-top: 1px dashed var(--bordure); }
+.titre-demo { font-size: 12px; font-weight: 650; color: var(--texte-doux); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
+.boutons-demo { display: flex; gap: 8px; flex-wrap: wrap; }
+.boutons-demo button {
+  border: 1px solid var(--bordure); background: #fff; color: var(--navy-800); border-radius: 999px;
+  padding: 6px 14px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.boutons-demo button:hover { border-color: var(--navy-600); background: var(--bleu-pale); }
+
+@media (max-width: 900px) {
+  .ecran { grid-template-columns: 1fr; }
+  .presentation { padding: 28px 24px; }
+  .accroche { margin: 28px 0 8px; }
+  .accroche h1 { font-size: 24px; }
+  .accroche p, ul, .pied { display: none; }
+}
+
+.bandeau-demo { background: var(--bleu-pale); color: var(--navy-800); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.45; }

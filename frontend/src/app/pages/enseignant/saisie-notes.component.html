@@ -1,0 +1,75 @@
+<div class="page-entete">
+  <div>
+    <a routerLink="/enseignant/ecs" class="retour"><app-icone nom="retour" [taille]="16" /> Mes enseignements</a>
+    <h1>{{ ec()?.libelle ?? 'Saisie des notes' }}</h1>
+    @if (ec(); as e) {
+      <p>{{ e.ue?.code }} {{ e.ue?.libelle }} · {{ e.ue?.classe?.libelle }} · Semestre {{ e.ue?.semestre }} · Coefficient {{ e.coefficient }}</p>
+    }
+  </div>
+  <button class="btn btn-primaire" (click)="enregistrer()" [disabled]="enCours() || !modifie()">
+    <app-icone nom="sauver" /> {{ enCours() ? 'Enregistrement…' : 'Enregistrer les notes' }}
+  </button>
+</div>
+
+<div class="regle">
+  Moy EC = <strong>MCC × 40 %</strong> + <strong>Examen × 60 %</strong>.
+  La note de <strong>rattrapage</strong> remplace l'examen si elle est meilleure.
+  Laissez l'examen vide s'il n'a pas encore eu lieu : il apparaîtra « à faire » sur le bulletin.
+</div>
+
+<div class="carte">
+  @if (lignes(); as liste) {
+    <div class="table-conteneur">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Identifiant</th><th>Prénom et nom</th>
+            <th class="centre">MCC<small>40 %</small></th>
+            <th class="centre">Examen<small>60 %</small></th>
+            <th class="centre">Rattrapage</th>
+            <th class="num">Moy EC</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (l of liste; track l.inscription_id) {
+            <tr>
+              <td class="secondaire chiffre">{{ $index + 1 }}</td>
+              <td class="secondaire chiffre">{{ l.identifiant }}</td>
+              <td><strong>{{ l.nom_complet }}</strong></td>
+              <td class="centre">
+                <input class="saisie" type="number" step="0.25" min="0" max="20" [name]="'m' + l.inscription_id"
+                  [attr.aria-label]="'MCC de ' + l.nom_complet"
+                  [(ngModel)]="l.mcc" (ngModelChange)="changement()" [class.invalide]="invalide(l.mcc)" />
+              </td>
+              <td class="centre">
+                <input class="saisie" type="number" step="0.25" min="0" max="20" [name]="'e' + l.inscription_id"
+                  [attr.aria-label]="'Examen de ' + l.nom_complet"
+                  [(ngModel)]="l.examen" (ngModelChange)="changement()" [class.invalide]="invalide(l.examen)" />
+              </td>
+              <td class="centre">
+                <input class="saisie ratt" type="number" step="0.25" min="0" max="20" [name]="'r' + l.inscription_id"
+                  [attr.aria-label]="'Rattrapage de ' + l.nom_complet"
+                  [(ngModel)]="l.rattrapage" (ngModelChange)="changement()" [class.invalide]="invalide(l.rattrapage)" />
+              </td>
+              <td class="num">
+                @if (moyenne(l) !== null) {
+                  <span [class]="classeNote(moyenne(l))">{{ moyenne(l) | note }}</span>
+                } @else { <span class="a-faire">Examen à faire</span> }
+              </td>
+            </tr>
+          } @empty {
+            <tr><td colspan="7" class="vide">Aucun étudiant inscrit dans cette classe.</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else { <app-chargement /> }
+</div>
+
+@if (modifie()) {
+  <div class="barre-modif no-print">
+    <span>Modifications non enregistrées</span>
+    <button class="btn btn-secondaire" (click)="charger()">Annuler</button>
+    <button class="btn btn-primaire" (click)="enregistrer()" [disabled]="enCours()">Enregistrer</button>
+  </div>
+}

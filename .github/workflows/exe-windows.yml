@@ -1,0 +1,80 @@
+name: Application Windows GestNotes
+
+# Construit l'application de bureau Windows (Electron) à partir du frontend Angular
+# en mode démonstration (fonctionne sans serveur ni Internet),
+# puis publie l'installateur et la version portable dans les « Releases ».
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'frontend/**'
+      - 'desktop/**'
+      - '.github/workflows/exe-windows.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            frontend/package-lock.json
+            desktop/package-lock.json
+
+      - name: Compiler l'application Angular (version démo)
+        working-directory: frontend
+        run: |
+          npm ci
+          npx ng build --configuration demo
+
+      - name: Copier le site dans l'application de bureau
+        shell: bash
+        run: |
+          rm -rf desktop/app
+          cp -r frontend/dist/demo/browser desktop/app
+
+      - name: Construire les fichiers .exe
+        working-directory: desktop
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: |
+          npm ci
+          npm run dist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GestNotes-windows
+          path: |
+            desktop/release/GestNotes-Installation.exe
+            desktop/release/GestNotes-Portable.exe
+
+      - name: Publier dans les Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: windows-${{ github.run_number }}
+          name: GestNotes Windows (version ${{ github.run_number }})
+          body: |
+            Application de bureau Windows de GestNotes (version de démonstration, fonctionne sans Internet).
+
+            - **GestNotes-Installation.exe** : installe l'application avec un raccourci sur le Bureau.
+            - **GestNotes-Portable.exe** : se lance directement, sans installation (pratique sur une clé USB).
+
+            Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires » puis « Exécuter quand même ».
+
+            Comptes de démonstration :
+            - Administrateur : admin@ecole.sn / admin123
+            - Enseignante : awa.ndiaye@ecole.sn / passer123
+            - Étudiante : astou.diagne@ecole.sn / passer123
+          files: |
+            desktop/release/GestNotes-Installation.exe
+            desktop/release/GestNotes-Portable.exe
+          make_latest: false

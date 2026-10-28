@@ -199,3 +199,19 @@ npx ng build --configuration demo
 npx cap sync android
 cd android && ./gradlew assembleDebug   # APK : app/build/outputs/apk/debug/app-debug.apk
 ```
+
+---
+
+## Application Windows
+
+Le dossier `desktop/` contient une application de bureau **Electron** qui ouvre la version de démonstration dans sa propre fenêtre (sans navigateur ni Internet).
+
+- **Télécharger :** onglet *Releases* → `GestNotes-Installation.exe` (installateur) ou `GestNotes-Portable.exe` (sans installation).
+  Les fichiers sont construits automatiquement par GitHub Actions (`.github/workflows/exe-windows.yml`).
+- **La lancer en développement :**
+
+```bash
+cd frontend && npm install && npx ng build --configuration demo && cd ..
+cp -r frontend/dist/demo/browser desktop/app      # sous Windows : xcopy /E /I frontend\dist\demo\browser desktop\app
+cd desktop && npm install && npm start            # npm run dist pour créer les .exe
+```

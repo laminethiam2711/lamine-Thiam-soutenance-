@@ -1,0 +1,47 @@
+{
+  "name": "gestnotes",
+  "productName": "GestNotes",
+  "version": "1.0.0",
+  "description": "Système de gestion des notes et résultats académiques (version de démonstration)",
+  "author": "Mohamed Lamine Thiam",
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "33.4.11",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "sn.isi.gestnotes",
+    "productName": "GestNotes",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "app/**/*",
+      "build/icon.png"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "GestNotes",
+      "artifactName": "GestNotes-Installation.exe"
+    },
+    "portable": {
+      "artifactName": "GestNotes-Portable.exe"
+    }
+  }
+}

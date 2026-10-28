@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@capacitor/app": "^6.0.3",
+    "@capacitor/core": "^6.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
@@ -26,6 +28,8 @@
     "@angular-devkit/build-angular": "^18.2.21",
     "@angular/cli": "^18.2.21",
     "@angular/compiler-cli": "^18.2.0",
+    "@capacitor/android": "^6.2.3",
+    "@capacitor/cli": "^6.2.3",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",

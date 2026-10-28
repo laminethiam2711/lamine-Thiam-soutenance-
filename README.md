@@ -180,3 +180,22 @@ frontend/src/app/
 - **Erreur de connexion MySQL** : vérifier que MySQL est démarré et que la base `gestion_notes` existe.
 - **Repartir de zéro** (obligatoire après cette mise à jour) : `php artisan migrate:fresh --seed`.
 - **Changer le nom, le sigle ou le signataire des bulletins** : `etablissement`, `sigle`, `signataire` dans `frontend/src/environments/environment.ts`.
+
+---
+
+## Application mobile Android
+
+Le frontend est aussi emballé en application Android avec **Capacitor** (dossier `frontend/android`).
+L'APK utilise la version de démonstration : les données sont intégrées et l'application fonctionne sans serveur.
+
+- **Télécharger l'APK :** onglet *Releases* du dépôt → fichier `GestNotes.apk`.
+  Il est reconstruit automatiquement par GitHub Actions (`.github/workflows/apk-android.yml`) à chaque modification du frontend.
+- **Le reconstruire soi-même** (Android Studio ou SDK Android requis) :
+
+```bash
+cd frontend
+npm install
+npx ng build --configuration demo
+npx cap sync android
+cd android && ./gradlew assembleDebug   # APK : app/build/outputs/apk/debug/app-debug.apk
+```

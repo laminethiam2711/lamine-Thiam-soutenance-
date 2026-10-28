@@ -1,0 +1,8 @@
+{
+  "appId": "sn.isi.gestnotes",
+  "appName": "GestNotes",
+  "webDir": "dist/demo/browser",
+  "android": {
+    "backgroundColor": "#0A1F3D"
+  }
+}
